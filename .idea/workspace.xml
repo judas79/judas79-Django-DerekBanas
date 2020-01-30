@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fe9c881-852a-4b4e-bec8-92f852e9c390" name="Default Changelist" comment="" />
+    <list default="true" id="1fe9c881-852a-4b4e-bec8-92f852e9c390" name="Default Changelist" comment="creating directory, django setup instruction in lesson 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="529">
+              <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions" />
+      </list>
+    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
@@ -23,7 +45,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Django-DerekBanas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django-DerekBanas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django-DerekBanas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Django-DerekBanas" type="462c0819:PsiDirectoryNode" />
+              <item name="Django Tutorial 1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -56,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580424171525</updated>
-      <workItem from="1580424173067" duration="277000" />
+      <workItem from="1580424173067" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="creating directory">
       <created>1580424389576</created>
@@ -65,11 +102,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580424389576</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="creating directory">
+      <created>1580424635360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580424635360</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277000" />
+    <option name="totallyTimeSpent" value="2103000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -103,6 +147,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating directory" />
+    <MESSAGE value="creating directory, django setup instruction in lesson 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating directory, django setup instruction in lesson 1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
