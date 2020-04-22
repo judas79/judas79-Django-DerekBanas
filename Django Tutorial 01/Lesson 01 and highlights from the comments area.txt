@@ -1,0 +1,375 @@
+In this lesson we will install Django and get the simple server, that comes with windows, 
+up and running.  Django is a Python based web framework, for creating web applications, without a lot of installation and dependencies, found with other frameworks.  It is easy to switch data bases, has built in features for example, admin manager, and is easy to work with.  There are thousands of packages that work Django and it scalable.
+
+On this machine pip and django where already installed be them in different locations, so the following is a quick double check to see the atributes of those installations and tips, of what not to use.
+Check to see what version of Python is running on your system:
+
+python --version
+OUTPUT: Python 3.6.5
+
+If 2.7 installed, upgrade to a full package of 3.4 or above at python.org, click on a MSI installer that matches your machines bit rate operating system 64, or 86(32bit).  Python should download in your C:/ directory, depending on the version.
+If you already installed pip and django continue here, if not jump down to the transcript from the lesson 1 tutorial below.
+  
+To check what version of pip you have, type the following in your home folder for this project, in terminal or cmd prompt or Powershell, making sure you first 'deactivate' your env site(virtual enviroment) you created durning this tutorial using:
+
+deactivate (to deactivate the virtual enviroment)
+
+activate (to activate)
+
+Run Python:
+
+python
+
+Check Django version:
+
+import django
+
+Then:
+
+django.get_version()
+
+Activate your Env again using activate, in your main projects folder, within cmd, terminal or PowerShell, then create your sample site by using 
+[django-admin startproject + ('the site name')]:
+
+django-admin startproject sampsite
+
+If using Pycharm editor, give it a minute to create your sample folder under the home directory, you created within, and the sample site folder will appear, in your side menu. 
+
+Next from your cmd prompt with your env vars on, change directories from your home folder to the site you created.  If you don't remember the site name, first type dir to see the files in the directory where you are at:
+
+dir
+
+Then change to the sites directory, in this case named sampsite, using:
+
+cd sampsite
+
+Do another dir and you will see another folder with the same name as the one you created; this is the actual site, in this tutorial sampsite.  There will also be another file named manage.py, which is used for many things and interacting with the site, including starting up the server for the project.
+
+So lets change directories into the site:
+
+cd sampsite
+
+Now within the actual site app, where we are now, type dir again, you should see this list of files, we will be using in the near future, to build the site:
+
+04/21/2020  06:14 PM             3,214 settings.py
+04/21/2020  06:14 PM               771 urls.py
+04/21/2020  06:14 PM               409 wsgi.py
+04/21/2020  06:14 PM                 0 __init__.py
+
+Settings.py - Has all your settings for your django project in it
+urls.py - Is like a table of contents for your web pages
+wsgi.pi - will serve your project.
+__init__.py - tells Python that these are python package.
+
+Next we will start up our server.  First we have to go back one, in cmd prompt, to the sampsite using:
+
+cd..
+
+Then to start the server, at cmd prompt type:
+
+python manage.py runserver
+
+If all went well you will get this response at the bottom of your cmd prompt, minus OUTPUT:, which is how I represent what the output that is given me by cmd prompt:
+
+OUTPUT:   Starting development server at http://127.0.0.1:8000/
+
+Click on the link or copy paste it into your browser.   You should get this page:
+
+The install worked successfully! Congratulations!
+You are seeing this page because DEBUG=True is in your settings file and you have not configured any URLs.
+
+http://127.0.0.1 is the local host on all computers.  Do not worry about the 'Run 'python manage.py migrate' to apply them.' message in cmd prompt, we will get to that later.  We will also work on web applications later on.  
+
+Next is how to set up django on a mac system, see Lesson 1 transcript referance below:
+
+
+**************** Lesson 1 transcript referance ****************
+
+
+# ---------- INSTALL DJANGO ON MAC ----------
+
+1. Check your Python version by typing in the terminal : python --version
+
+2. You want Python 3.4 or higher. Type the following to see if you have Python 3 in the terminal : python3 --version
+
+3. If you need Python 3.4 or above do this
+
+	A. Download Python at https://www.python.org/downloads
+	
+	B. Click Download Python 3.5.1 or later
+	
+	C. Click Open
+	
+	D. Click continue a few times. Agree to the terms and install. You may have to enter your password.
+	
+4. Check to see if you have pip installed in the terminal type : pip --version
+
+5. If you don't have pip 8 or above type in the terminal : sudo easy_install pip
+
+6. Type in the terminal : sudo pip install Django
+
+7. Test that Django is installed in the terminal
+
+	A. python3
+	
+	B. import django
+	
+	C. django.get_version()
+	
+	D. You should see '1.10.2' or higher
+	
+8. Create a sample site : django-admin startproject sampsite
+
+	A. sampsite is were your project lives
+	
+		i. __init__.py tells Python that this is a Python package
+		
+		ii. settings.py has settings for the Django project
+		
+		iii. urls.py a sort of table of contents for your project
+		
+		iv. wsgi.py serves your project
+	
+	B. manage.py allows you to interact with your project
+	
+9. Start the server : python manage.py runserver
+
+# ---------- INSTALL DJANGO ON WINDOWS ----------
+
+1. Check your Python version by typing in the terminal : python --version 
+(You want Python 3.4 or higher)
+
+2. If Python 3.4 or higher isn't installed
+
+	A. Go to https://www.python.org/getit/windows/
+	
+	B. Click on Latest Python 3 Release 
+	
+	C. Click on Windows x86 executable installer
+	
+	D. Click Run
+	
+	E. Check Install for all users and add Python 3 to path
+	
+		a. Open Control Panel -> System & Security -> System -> Advanced System Settings on the left
+		
+		b. Environment Variable button
+		
+		c. Select PATH and click edit
+		
+		d. Add c:\Pyhon34, or what ever your Python directory is
+		
+3. Install Pip in the command line type : python -m pip install -U pip
+
+4. Create a Python Virtual Environment so we don't have to worry about changing dependencies that your system may not want edited. 
+
+	A. Type in Command Prompt : pip install virtualenv
+	
+	B. Create the virtual environment for your site in command prompt : virtualenv env_site1 
+	
+	C. Activate the environment in CP 
+	
+		i. cd Scripts
+		
+		ii. activate
+		
+5. Install Django in CP : pip install django
+
+6. Test that it works
+
+	A. python
+	
+	B. import django
+	
+	C. django.get_version()
+	
+	D. You should see '1.10.2' or higher
+	
+7. Create a sample site : django-admin startproject sampsite
+
+	A. sampsite is were your project lives
+	
+		i. __init__.py tells Python that this is a Python package
+		
+		ii. settings.py has settings for the Django project
+		
+		iii. urls.py a sort of table of contents for your project
+		
+		iv. wsgi.py serves your project
+	
+	B. manage.py allows you to interact with your project
+	
+8. Start the server : python manage.py runserver
+
+
+
+**************** highlights from the comments area *********************
+
+
+
+
+Django is good, also flask is great because you can choose what you want, but in Django you have to do it the Django way so its more annoying but good
+
+
+
+
+
+I'm on a Mac and it's saying: "Requirement already satisfied (use --upgrade to upgrade): Django in /usr/local/lib/python2.7/site-packages", but I want to use 3.5...does this have to do with my Python Path? I have Python 3.5.2 downloaded but it' doesn't show when I go to /Library/Python (just shows 2.6 and 2.7). Sorry, I'm new to this but appreciate any help!
+
+
+Did you install using python3 versus python?
+
+
+Firstly, thanks for the quick reply and all the great vids you post. I wasn't doing pip3 install, but just got it to work. Thanks!
+
+
+
+
+
+i was getting an error while installing Django on Mac. It was somehow pointing to version 2.7 rather than 3.5 though i had both the version installed. Following this I found the following fix in stackoverflow
+The Django docs recommend that you create a virtual environment for the version of Python you wish to use, then install Django using pip.
+On OS X, pyvenv is installed along with Python 3.
+-----------------------------------type the following in terminal---------------------
+pyvenv djangodev # create the virtual env.  
+source djangodev/bin/activate # activate it
+pip install django
+--------------------------------------------------------------------------------------------------------
+I don't know how but, now it works fine for me.
+>>> django.get_version()
+'1.10.5'
+
+
+
+
+
+"D-J-A-N-G-O. The D is silent."
+
+
+
+
+
+just wanted to mention that if you use Anaconda as your package manager you can do environments with that too and Anaconda has a nice interface built in. :)
+
+
+
+
+
+Why not make one of your OS choice be linux? I should say i am really grateful for all these videos. It's a great help especially to the developing world where it is hard to find good teachers. (Their pay is so low that even the ones who love yo teach can't choose it as a profession)
+
+
+Jung Junk you can take pretty much what he does on Mac and replace mac functions by linux. It works pretty much the same but with different syntax !
+
+
+
+
+
+You forgot about install virtualenv in the Mac install section. Also good to install virtualenvwrapper. A bit about why virtualenv is so useful would have been good as precursor to install.
+https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+
+
+
+django is good for ecommerce?
+
+
+Django can do pretty much anything you'd need
+
+
+
+
+
+For those  of you having issues with the Django installation on Mac make sure you are pointing to "pip3" and not just "pip".... as you can see on the documentation pip refers to your 2.x (the one that comes pre-installed) python, so you will have to make it point to your downloaded version 3.5.x or whatever, the commands should be something like: pip3 --version or whatever you are trying to do !! I hope this saves you the 30 mins it took me to fix!
+
+
+
+
+
+Hey .. I am gonna start Django now and its version 2.1. Will I face problems in this course?
+
+yes, complications; but their are new methods and tools to achieve the same or similar outcome.
+
+
+
+
+
+In the step where we create a virtualenv for our site, when a user is using Admin mode in CMD, it gives out errors. So just try to run CMD without admin. Nice tutorial, following all of them :)
+
+
+
+
+
+Hello Derek can i write with visual studio enterprise 2015 - Django Web Project?
+
+
+Yes that should work, but you'll probably want Python Tools for Visual Studio
+
+
+
+
+
+I can only on Mac import django in python but not in python3!
+
+ON sudo pip install Django
+
+
+Wayne Johnson do pip3 install django
+
+
+http://stackoverflow.com/questions/26545436/unable-to-import-django-in-python3-4
+This↑
+
+Usually, it's best to run pip with: "python -m pip" instead of straight pip.
+
+
+
+
+
+
+Why exit from the python console using quit() when CTRL+D seems to do the job quicker? Or doesn't that work on windows?
+
+I always show the way of doing things that has the highest percentage of success
+
+
+
+
+
+
+in activation of script... i got a problem. In my env_site1 only include these dir and files. what should i do? 
+bin  include  lib  local  pip-selfcheck.json
+thank you for uploading these tutorials
+
+
+I'm glad I could help :) Is Scripts not showing up? Try creating the virtual environment again.
+
+
+ah thank you for replying me. I have to activate source bin, because of i am using ubuntu. thank you again
+
+
+
+
+
+
+I install django by using easy_install django  on linux/GNU os.
+what is different between virtualenv vs Easy_install?
+
+
+With a virtual environment you don't have to worry about creating dependency problems. I actually did both in this tutorial
+
+
+
+
+
+Pro tip: watch sentdex's first 4 or 5 videos on django first, then come and watch all of derek banas. Trust me
+
+
+
+
+
+
+Note: following this tutorial on django 2 you may get an error when first running: "django.db.utils.OperationalError: unable to open database file". To fix this, open your settings.py and comment all lines about DATABASE
+
+
+
+
+

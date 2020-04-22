@@ -1,0 +1,20 @@
+.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>deactivate
+C:\Users\Gina\PycharmProjects\Django-DerekBanas>python3
+'python3' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas>python
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import django
+>>> django.get_version()
+'3.0.3'
+>>> django-admin startproject sampsite
+  File "<stdin>", line 1
+    django-admin startproject sampsite
+                            ^
+SyntaxError: invalid syntax
+>>>

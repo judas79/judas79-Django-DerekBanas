@@ -1,0 +1,163 @@
+778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python manage.py runserver
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python --version
+Python 3.6.5
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python -m pip install -U pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 19.0.3
+    Uninstalling pip-19.0.3:
+      Successfully uninstalled pip-19.0.3
+  Rolling back uninstall of pip
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg
+   from c:\users\gina\pycharmprojects\kivy\venv\lib\site-packages\~ip-19.0.3-py3.6.egg
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip-script.py
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip-script.py
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip.exe
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip.exe
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip.exe.manifest
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip.exe.manifest
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3-script.py
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3-script.py
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3.6-script.py
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3.6-script.py
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3.6.exe
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3.6.exe
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3.6.exe.manifest
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3.6.exe.manifest
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3.exe
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3.exe
+  Moving to c:\users\gina\pycharmprojects\kivy\venv\scripts\pip3.exe.manifest
+   from C:\Users\Gina\AppData\Local\Temp\pip-uninstall-ydramf0j\pip3.exe.manifest
+Exception:
+Traceback (most recent call last):
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\cli\base_command.py", line 179, in main
+    status = self.run(options, args)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\commands\install.py", line 393, in run
+    use_user_site=options.use_user_site,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\req\__init__.py", line 57, in install_given_reqs
+    **kwargs
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\req\req_install.py", line 913, in install
+    use_user_site=use_user_site, pycompile=pycompile,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\req\req_install.py", line 445, in move_wheel_files
+    warn_script_location=warn_script_location,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_internal\wheel.py", line 544, in move_wheel_files
+    generated.extend(maker.make(spec))
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_vendor\distlib\scripts.py", line 405, in make
+    self._make_script(entry, filenames, options=options)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_vendor\distlib\scripts.py", line 309, in _make_script
+    self._write_script(scriptnames, shebang, script, filenames, ext)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_vendor\distlib\scripts.py", line 245, in _write_script
+    launcher = self._get_launcher('t')
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip\_vendor\distlib\scripts.py", line 384, in _get_launcher
+    result = finder(distlib_package).find(name).bytes
+AttributeError: 'NoneType' object has no attribute 'bytes'
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>pip --version
+pip 19.0.3 from c:\users\gina\pycharmprojects\kivy\venv\lib\site-packages\pip-19.0.3-py3.6.egg\pip (python 3.6)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>Django --version
+'Django' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>django --version
+'django' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>django --version
+'django' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python3
+'python3' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>Python 3.6.5
+Python: can't open file '3.6.5': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python import django
+python: can't open file 'import': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python3 import django
+'python3' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>django.get_version()
+'django.get_version' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>django-admin startproject sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3EBB-BA5F
+
+ Directory of C:\Users\Gina\PycharmProjects\Django-DerekBanas
+
+04/21/2020  06:14 PM    <DIR>          .
+04/21/2020  06:14 PM    <DIR>          ..
+04/21/2020  06:20 PM    <DIR>          .idea
+04/21/2020  06:14 PM    <DIR>          sampsite
+               0 File(s)              0 bytes
+               4 Dir(s)  316,829,949,952 bytes free
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd samplesite
+The system cannot find the path specified.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3EBB-BA5F
+
+ Directory of C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite
+
+04/21/2020  06:14 PM    <DIR>          .
+04/21/2020  06:14 PM    <DIR>          ..
+04/21/2020  06:14 PM               649 manage.py
+04/21/2020  06:14 PM    <DIR>          sampsite
+               1 File(s)            649 bytes
+               3 Dir(s)  316,829,618,176 bytes free
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite>dir
+ Volume in drive C is OS
+ Volume Serial Number is 3EBB-BA5F
+
+ Directory of C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite
+
+04/21/2020  06:14 PM    <DIR>          .
+04/21/2020  06:14 PM    <DIR>          ..
+04/21/2020  06:14 PM               409 asgi.py
+04/21/2020  06:14 PM             3,214 settings.py
+04/21/2020  06:14 PM               771 urls.py
+04/21/2020  06:14 PM               409 wsgi.py
+04/21/2020  06:14 PM                 0 __init__.py
+               5 File(s)          4,803 bytes
+               2 Dir(s)  316,833,497,088 bytes free
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite>cd
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite>cd..
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+April 21, 2020 - 20:24:43
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[21/Apr/2020 20:24:59] "GET / HTTP/1.1" 200 16351
