@@ -3,6 +3,8 @@ up and running.  Django is a Python based web framework, for creating web applic
 and dependencies, found with other frameworks.  It is easy to switch data bases, has built in features for example,
 admin manager, and is easy to work with.  There are thousands of packages that work Django and it scalable.
 
+In the windows explorer address field, where ever directory you may be in;  if you type cmd in the address field, you
+will launch a cmd prompt in that directory address.
 On this machine pip and django where already installed be them in different locations, so the following is a quick
 double check to see the attributes of those installations and tips, of what not to use.
 Check to see what version of Python is running on your system:
@@ -37,7 +39,7 @@ Then:
 django.get_version()
 
 Activate your Env again using activate, in your main projects folder, within cmd, terminal or PowerShell, then create
-your sample site by using
+your sample site project by using
 [django-admin startproject + ('the site name')]:
 
 django-admin startproject sampsite
@@ -63,7 +65,7 @@ So lets change directories into the site:
 cd sampsite
 
 Now within the actual site app, where we are now, type dir again, you should see this list of files, we will be using in
-the near future, to build the site:
+the near future, to build the site.  This app points to other apps within your site:
 
 04/21/2020  06:14 PM             3,214 settings.py
 04/21/2020  06:14 PM               771 urls.py

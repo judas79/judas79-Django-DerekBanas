@@ -1,11 +1,15 @@
 ******************* cmd prompt or Power Shell ***************
+
 Launch power shell or cmd under the directory you want it to exist
 django-admin startproject <name of project goes here>  #  create a project;  FROM LESSON 2 ie L2
+
+Look at all the option available for django-admin      #  Sentdexs'  django L1
+django-admin
 
 In the projects directory launch Power Shell or cmd prompt, Terminal
 python manage.py startapp <app name here>  #  To create a package directory, where other apps and files can exists; L3
 
-python -m django --version  #  to get django version in powershell;  L4
+python -m django --version  #  to get django version in PowerShell;  L4
 or
 import django;
 print(django.get_version());
@@ -16,7 +20,7 @@ python manage.py makemigrations                     # or to make specific table 
 python manage.py makemigrations <the package name>  # 'music' in this project. reflect changes to blueprint
                                                     # sql in database, CREATES a change file; L8
 
-python manage.py migrate    # migrate the new sql files change filewe just made, to the database,
+python manage.py migrate    # migrate the new sql files change file we just made, to the database,
                             # and syncs it with our code; L8
 
 python manage.py sqlmigrate music 0001 # see what this migration of the 'music' app accomplished using id number; L8
@@ -29,7 +33,8 @@ clear #  clear all text;  L2
 
 ******************* Django shell API ********************
 
-******* make powershell auto run server *****************
+******* make PowerShell auto run server *****************
+
 invoke-expression 'cmd /c start powershell -Command { cd C:\Users\Gina\PycharmProjects\djangotheNewBoston; python .\manage.py runserver}'
 
 cd C:\Users\Gina\PycharmProjects\djangotheNewBoston   #first change cmd to projects home directory
