@@ -1,0 +1,147 @@
+******************* cmd prompt or Power Shell ***************
+Launch power shell or cmd under the directory you want it to exist
+django-admin startproject <name of project goes here>  #  create a project;  FROM LESSON 2 ie L2
+
+In the projects directory launch Power Shell or cmd prompt, Terminal
+python manage.py startapp <app name here>  #  To create a package directory, where other apps and files can exists; L3
+
+python -m django --version  #  to get django version in powershell;  L4
+or
+import django;
+print(django.get_version());
+
+python manage.py migrate;  migrate your changes in attributes tables to your database to update it;  L6
+
+python manage.py makemigrations                     # or to make specific table migrations in your database
+python manage.py makemigrations <the package name>  # 'music' in this project. reflect changes to blueprint
+                                                    # sql in database, CREATES a change file; L8
+
+python manage.py migrate    # migrate the new sql files change filewe just made, to the database,
+                            # and syncs it with our code; L8
+
+python manage.py sqlmigrate music 0001 # see what this migration of the 'music' app accomplished using id number; L8
+
+
+'cmd' + c  # close Power Shell Window;  L2
+
+clear #  clear all text;  L2
+
+
+******************* Django shell API ********************
+
+******* make powershell auto run server *****************
+invoke-expression 'cmd /c start powershell -Command { cd C:\Users\Gina\PycharmProjects\djangotheNewBoston; python .\manage.py runserver}'
+
+cd C:\Users\Gina\PycharmProjects\djangotheNewBoston   #first change cmd to projects home directory
+
+python manage.py runserver # Run development server
+
+python manage.py shell  # start django API shell ; L9
+
+from music.models import Album, Song # import column tables created in models.py, Album and Song;  L9
+
+Album.objects.all() # To see all the items in the album table; L9
+
+a = Album(artist='Taylor Swift', album_title='Red', genre='Country',
+album_logo='<url>') # to create a python object all at once, (url) using HttpResponse, L9
+
+a.save() #  to save it to the database;  L9
+
+a.<name of attribute>  # example  a.album_title, retrieve information stored within one of the attribute columns: L9
+
+a.id  or a.pk # variable (the column name).  To use the id, enter to get id/ pk number: L9
+
+b.Album() # create object variable without any information in Album class; L9
+
+b.artist='Myth' #  add information to Album class, attributes column; L9
+
+b.artist='Whatever' # To change a column with an object, follow the same procedure to overwrite it; L9
+
+Album.objects.filter(id=1) # filter out some objects and get other specific ones, use filter and (id=<number>) L10
+
+Album.objects.filter(artist__startswith='Taylor') # do a search within a object using filter and id, attribute column
+                                                  # item then:  '__startswith=' then search term, within quotes; L10
+
+python manage.py createsuperuse  # to create admin name and password, in the admin page; L11
+
+http://localhost:8000/admin/ # in your browser will bring you to your admin.; L11
+
+from . models import Album  #  to import Album from this folder; L11
+
+admin.site.register(Album)  # register Album as an admin site; L11
+
+from music.models import Album, Song  # import music. models as well as Albums and now including Song
+
+album = models.ForeignKey(Album, on_delete=models.CASCADE)  # reference to an Album. In the models.py, in class Song
+                                                            # there is an attribute that points to an album; L17
+
+album1 = Album.objects.get(pk=1) #  create a variable that points the songs to the album; L17
+
+album1.artist # to verify get a variable from the 'Album' that album1 points to; L17
+
+song = Song() # This creates a blank song object; L17
+
+song.album = album1  # add attributes to song So the album for this song is album1, the object 'song' created earlier L17
+
+song.file_type = 'mp3' #  enter attributes; L17
+
+song.save() # saved to the data base; L17
+
+song.song_title = 'I hate everybody' #  To change something just enter it again with the changes, and then save; L17
+song.save() # save; L17
+
+album1.song_set.all()  # how you access Albums Song; object then lowercase of class Song _set, then all;  L18
+
+# If you have exited django shell you will have to restart the API; L18
+python manage.py shell
+#  import music. models as well as Albums and Song; L18
+from music.models import Album, Song
+
+album1 = Album.objects.get(pk=1)  #  create a variable that points the songs to the album; L18
+
+album1.artist #  verify this is the correct album; L18
+
+album1.song_set.all()  # how you access Albums Song; object then lowercase of class Song _set, then all; L18
+
+Now we will use the 'create' function to add a song in one line instead of all this; L18
+song.album = album1
+song.file_type = 'mp3' # we pretend its an mp3 but it could be a wav or whatever; L18
+song.song_title = 'I hate my boyfriend'
+song.save() # saved to the data base
+
+album1.song_set.create(song_title='I love Bacon', file_type='mp3') # create a new object, save it, put it in Songs
+                                                                   # set; L18
+
+song1 = album1.song_set.create(file_types='wav', song_title='I hate Eggs') # reference to that song, assigned to a
+                                                                           # variable; L18
+
+# To verify you can: L18
+song1.album
+# Or
+song1.song_title
+# Or use the old way, as we did before; L18
+album1.song_set.all()
+
+album1.song_set.count() # how many objects there are in Songs; L18
+
+album1.album_logo = "image source goes here" # add album_logo image source to the database; L19 (comments)
+
+
+
+*************************** django code within html ********************
+
+
+
+
+{% comment %}    {% endcomment %}  # uncomment django code within html
+
+{{  }}   # use this to express the contents of a variable
+
+{%  %}   # use this for logic or inserting instructional statements
+
+{% for <variable1> in <iterable value> %}  # begin for statement, no colon at the end;
+{% endfor %}                              # end the for statement
+{{ <variable1>.<attribute name> }} - {{ <variable1>.<attribute name2> }}  # for displaying the for statements output
+
+{% if <attribute> %} <!-- if there are any of these in this <attribute> then this will br True-->
+{% endif %}  # end if statement

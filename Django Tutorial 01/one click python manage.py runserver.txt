@@ -1,0 +1,42 @@
+THIS WAS TAKEN FROM ANOTHER TUTORIAL I WAS LEARNING.  YOU WILL HAVE TO CHANGE THE LOCATION OF THE FILES, TO THE LOCATION
+YOU ARE CURRENTLY USING:
+
+This is how to make a one click answer, for lazy people like me, that do not want to type commands to run the server,
+every time the server needs to be run, to see if your project will run.  I put the knowledge gathered, from two links,
+together, to come up with the following answer.
+
+https://k00d14.wordpress.com/2018/06/13/how-to-launch-multiple-powershell-instances-with-a-script/
+
+https://www.tenforums.com/tutorials/97162-powershell-scripting-run-script-shortcut.html
+
+The examples in this git-hub repo will have to be modified, with the paths, of the computer, on which the scripts will
+be run.  I made this as simple as I could illustrate, but look at the links above, for further assistance, if this how to,
+fails to work properly.
+
+At the end of this small 'how to' you will have two scripts; one for PowerShell that runs the server, and a shortcut,
+for your desktop or task-bar, to launch PowerShell.
+
+1. Open Notepad and paste the following script into the new document. Change your path, to your corresponding path,
+where bucky (theNewBoston), got you to set up the django lesson folder, in which the manage.py resides.
+
+invoke-expression 'cmd /c start powershell -Command { cd CHANGE PATH HERE; python .\manage.py runserver }'
+
+[EXAMPLE]
+invoke-expression 'cmd /c start powershell -Command { cd C:\Users\Roddy\PycharmProjects\djangotheNewBoston; python .\manage.py runserver }'
+
+2.  On the bottom of notepad click 'all files' and save your file as 'whateverYouWantName'.ps1
+
+The instructions in this tutorial as image examples and is a lot easier to follow than if I typed out instruction in a
+text.  So, head here and continue where I left off, by creating a shortcut, from 'whateverYouWantName'.ps1
+
+https://www.tenforums.com/tutorials/97162-powershell-scripting-run-script-shortcut.html
+
+return here after creating the shortcut, from the website above's tutorial:
+
+Leave both the *.ps2 and the *.lnk (shortcut), in the folder that contains the manage.py script, and right click on the
+*.ps1 and click "pin to task-bar'.
+
+This same tutorial can most like be applied to running other scripts and apps using PowerShell.
+
+Look at my django Derek Banas tutorials, on how to create a similar sequence, using the command prompt to activate a
+virtual env and then go to the working folder 'sampserver, in that tutorial... with one click!
