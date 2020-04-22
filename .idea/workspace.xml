@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fe9c881-852a-4b4e-bec8-92f852e9c390" name="Default Changelist" comment="creating directory, django setup instruction in lesson 1">
+    <list default="true" id="dd354981-0dd6-413d-b59b-dcf9bfa1226a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sampsite/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/sampsite/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/sampsite/asgi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/sampsite/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/sampsite/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sampsite/sampsite/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Django-DerekBanas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Django-DerekBanas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,32 +19,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="5" />
-    <option name="y" value="9" />
+    <option name="x" value="662" />
     <option name="width" value="702" />
     <option name="height" value="653" />
   </component>
@@ -45,6 +33,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -55,21 +44,24 @@
             <path>
               <item name="Django-DerekBanas" type="b2602c69:ProjectViewProjectNode" />
               <item name="Django-DerekBanas" type="462c0819:PsiDirectoryNode" />
-              <item name="Django Tutorial 1" type="462c0819:PsiDirectoryNode" />
+              <item name="sampsite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Django-DerekBanas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -88,41 +80,26 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1fe9c881-852a-4b4e-bec8-92f852e9c390" name="Default Changelist" comment="" />
-      <created>1580424171525</created>
+      <changelist id="dd354981-0dd6-413d-b59b-dcf9bfa1226a" name="Default Changelist" comment="" />
+      <created>1587500479707</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580424171525</updated>
-      <workItem from="1580424173067" duration="2103000" />
+      <updated>1587500479707</updated>
+      <workItem from="1587500497718" duration="8120000" />
     </task>
-    <task id="LOCAL-00001" summary="creating directory">
-      <created>1580424389576</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580424389576</updated>
-    </task>
-    <task id="LOCAL-00002" summary="creating directory">
-      <created>1580424635360</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1580424635360</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2103000" />
+    <option name="totallyTimeSpent" value="8120000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1376" height="784" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50487804" side_tool="true" weight="0.19680852" />
       <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49512196" visible="true" weight="0.09270517" />
       <window_info id="Structure" order="2" sideWeight="0.50487804" side_tool="true" weight="0.19680852" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32933104" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.3280255" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="4" />
@@ -144,19 +121,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="creating directory" />
-    <MESSAGE value="creating directory, django setup instruction in lesson 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating directory, django setup instruction in lesson 1" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Django Tutorial 1/pip, env, and django Installation instructions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="113" column="48" selection-start-line="113" selection-start-column="48" selection-end-line="113" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
