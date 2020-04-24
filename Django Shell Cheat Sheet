@@ -20,6 +20,9 @@ python manage.py makemigrations                     # or to make specific table 
 python manage.py makemigrations <the package name>  # 'music' in this project. reflect changes to blueprint
                                                     # sql in database, CREATES a change file; L8
 
+python manage.py sqlmigrate  <name of app> <the id from makemigrations> # to see the sql used to make the tables- Derek 2
+python manage.py sqlmigrate polls 0001
+
 python manage.py migrate    # migrate the new sql files change file we just made, to the database,
                             # and syncs it with our code; L8
 
@@ -41,11 +44,11 @@ cd C:\Users\Gina\PycharmProjects\djangotheNewBoston   #first change cmd to proje
 
 python manage.py runserver # Run development server
 
-python manage.py shell  # start django API shell ; L9
+python manage.py shell  # start django API shell to add data to database; L9
 
 from music.models import Album, Song # import column tables created in models.py, Album and Song;  L9
 
-Album.objects.all() # To see all the items in the album table; L9
+Album.objects.all() # To see all the items in the album table that have been entered; L9
 
 a = Album(artist='Taylor Swift', album_title='Red', genre='Country',
 album_logo='<url>') # to create a python object all at once, (url) using HttpResponse, L9

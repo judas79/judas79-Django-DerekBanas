@@ -8,5 +8,10 @@ number that the portion of code was derived from.  L5 for example would be from 
 When the code is using django and or bootstrap, it will be noted, in the code comments on lesson 1 till the end of the
 lessons.
 
+Be aware, that some of the files will be renamed, with the pre-name containing the lesson number it was used in.  This is
+because, as the lessons progress, some of the code will be depreciated, or changed completely, to make the topic lesson
+function correctly.  Example views.py may be changed in lesson 5 so drastically has to have to be replaced, but lets say
+remained structurally the same up until then; we would rename it L1_to_L4_views.py.
+
 Share these files freely, for this is just all meant to be an exercise in using: Django, PyCharm, and git within PyCharm
 pro, to access and organise my learning on git-hub.
