@@ -1,0 +1,198 @@
+Microsoft Windows [Version 10.0.18362.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python manage.py shell
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from polls .models import Question, Choice
+>>> Question.object.all
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Question' has no attribute 'object'
+>>> Question.object.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Question' has no attribute 'object'
+>>> Question.objects.all()
+<QuerySet []>
+>>> from django.utils import timezone
+>>> q = Question(question_text='Whats New?', pub_date=timezone.now())
+>>> q.save()
+>>> q.id
+1
+>>> 1.pk
+  File "<console>", line 1
+    1.pk
+       ^
+SyntaxError: invalid syntax
+>>> q.pk
+1
+>>> q.question_text
+'Whats New?'
+>>> 'Whats New?'
+'Whats New?'
+>>> q.pub_date
+datetime.datetime(2020, 4, 24, 0, 25, 51, 903813, tzinfo=<UTC>)
+>>> q.question_text="What's Up?"
+>>> q.question_text
+>>> quit()
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> Question.objects.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Question' is not defined
+>>> from polls .models import Question, Choice
+>>> Question.objects.all()
+<QuerySet [<Question: What's Up?>]>
+>>> Question.objects.filter(id=1)
+<QuerySet [<Question: What's Up?>]>
+
+
+                                                                                  >>> Question.objects.f
+
+
+
+>>> from django.utils import timezone
+>>> current_year = timezone.now().year
+>>> Question.objects.get(pub_date__year=current_year)
+<Question: What's Up?>
+>>> Question.objects.filter(id=2)
+<QuerySet []>
+>>> Question.objects.get(id=2)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line
+82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 41
+7, in get
+    self.model._meta.object_name
+polls.models.Question.DoesNotExist: Question matching query does not exist.
+>>> Question.objects.get(pk=1)
+<Question: What's Up?>
+>>> pq = Question.objects.get(pk=1)
+>>> pq.was_published_recetly()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Question' object has no attribute 'was_published_recetly'
+>>> pq.was_published_recently()
+True
+>>> q.choice_set.all()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> pq.choice_set.all()
+<QuerySet []>
+>>> pq.choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\related_des
+criptors.py", line 676, in create
+    return super(RelatedManager, self.db_manager(db)).create(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line
+82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 43
+1, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\base.py", line 500
+, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Choice() got an unexpected keyword argument 'votes'
+>>> q.choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'q' is not defined
+>>> q = Question(question_text='Whats New?', pub_date=timezone.now())
+>>> pq = Question(question_text='Whats New?', pub_date=timezone.now())
+>>> pq.choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\related_des
+criptors.py", line 676, in create
+    return super(RelatedManager, self.db_manager(db)).create(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line
+82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 43
+1, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\base.py", line 500
+, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Choice() got an unexpected keyword argument 'votes'
+>>> pq.Choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Question' object has no attribute 'Choice_set'
+>>> q.choice_set.all()
+<QuerySet []>
+>>> q = Question.objects.get(pk=1)
+>>> q.was_published_recently()
+True
+>>> q.Choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Question' object has no attribute 'Choice_set'
+>>> q.choice_set.create(choice_text='not much', votes=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\related_des
+criptors.py", line 676, in create
+    return super(RelatedManager, self.db_manager(db)).create(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line
+82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 43
+1, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\base.py", line 500
+, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Choice() got an unexpected keyword argument 'votes'
+>>> q.choice_set.create(choice_text='not much', vote=0)
+<Choice: not much>
+>>> q.choice_set.create(choice_text='not much', vote=0)
+<Choice: not much>
+>>> pq.choice_set.create(choice_text='not much', vote=0)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\related_des
+criptors.py", line 676, in create
+    return super(RelatedManager, self.db_manager(db)).create(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line
+82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 43
+3, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\base.py", line 694
+, in save
+    "unsaved related object '%s'." % field.name
+ValueError: save() prohibited to prevent data loss due to unsaved related object 'question'.
+>>> q.choice_set.create(choice_text='the sky', vote=0)
+<Choice: the sky>
+>>> q.choice_set.create(choice_text='the clouds', vote=0)
+<Choice: the clouds>
+>>> q.choice_set.all()
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>, <Choice: the clouds>]>
+>>> q.choice_set.count()
+4
+>>> Choice.objects.filter(question__pub_date__year=current_year)
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>, <Choice: the clouds>]>
+>>> c = q.choice_set.filter(choice_text__startswith='the clouds')
+>>> c.delete()
+(1, {'polls.Choice': 1})
+>>> q.choice_set.all()
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>]>
+>>>

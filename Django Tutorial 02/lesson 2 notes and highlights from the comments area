@@ -1,0 +1,566 @@
+In this lesson we will examine MVC (model view controller), connecting urls to functions, Django settings, set up
+SQLite and Polls.  We will be using Pycharm for the code, terminal within Pycharm to run the server, a second terminal
+within pycharm to execute the code, and google browser, to view our website.  In the first terminal, change directories
+to the project sampsite directory(cd sampsite) for me.  Then start up the server by typing and press enter (always press
+enter after typing in the command):
+
+python manage.py runserver
+
+First we will create 'polls' in the 'project sampsite' directory, the one with manage.py in it.   Change directories
+within another terminal window, to that directory (project sampsite directory is the main directory and the sampsite app
+lies within that directory).  Then, to create the polls app directory, type/enter:
+
+python manage.py startapp polls
+
+You will get nothing returned in terminal, unless there was an error made.  A new directory named polls should appear
+shortly, within your project sampsite directory named polls.  If you do a dir in Windows, you wills see polls in
+terminal:
+
+04/21/2020  08:24 PM                 0 db.sqlite3
+04/21/2020  06:14 PM               649 manage.py
+04/22/2020  02:28 PM    <DIR>          polls
+04/21/2020  08:24 PM    <DIR>          sampsite
+
+Next change directories to polls and do a dir in terminal there, and you should see:
+
+
+04/22/2020  02:28 PM    <DIR>          .
+04/22/2020  02:28 PM    <DIR>          ..
+04/22/2020  02:28 PM                66 admin.py
+04/22/2020  02:28 PM                90 apps.py
+04/22/2020  02:28 PM    <DIR>          migrations
+04/22/2020  02:28 PM                60 models.py
+04/22/2020  02:28 PM                63 tests.py
+
+
+These are the files we will be manipulating/ using in this lesson.
+
+The model view controller MVC  (models.py) will act as the interface to the data, the view, (not yet created) will be
+the interface, that the user sees, and the controller will pass information between both of them.
+
+Next we will right click the sampsite app, in the Pycharm left menu, and choose 'New' then choose 'python File' then type:
+
+views
+
+in the empty field, then press OK.  This will create a blank views.py file in you sampsite app directory.  This is the
+model view controller.  This import, will pass back the response, after a function has been called, from the function to
+view, so that the response can be displayed.  In the views.py we will import:
+
+# L2 use HttpResponse to pass info into views
+from django.http import HttpResponse
+
+
+
+We wil also import random, for random numbers we will be using,
+
+import random
+
+Next we will make a simple view function, that receives the information when its called.  It will be passed information
+with 'request' from view, then send the response using the HttpResponse, that we imported.
+
+# L2 get request from view, return response using HttpResponse
+
+def hello_world(request):
+
+    return HttpResponse('Hello World!')
+
+Next we will open up our sampsite/urls.py file.  We will import a few things, including the urls handler import, that
+replaced the non functional, Deprecated, url pattern handler in django 2.x and higher, that was used in this lesson.
+
+# deprecated
+django.conf.urls.url
+
+We will be using path to handle our url patterns.  This matches the url in the browser to a url within our module, in our
+django project:
+
+# L2 instead of django.conf.urls.url "deprecated"
+# matches url in browser to url in project
+from django.urls import path
+
+The admin import loads urls for our admin site. (more on this, in a later lesson)
+# L2 loads urls for our admin site
+from django.contrib import admin
+
+Next we will import our function we made in views.py, to say 'Hello World!' The dot ' . ' mean that the file, views is
+stored locally.  Use . to import local files containing class, and other functions (def):
+
+# L2 pass in local function hello_world from the views.py file
+from .views import hello_world
+
+Next in urls.py we will list all the urls and tie them to specific functions.   In this case, first we will add the
+directory that will be tied to the url path to our hello_world function.  To construct the url-pattern for use with older
+Django versions, before v3, that use 'django.conf.urls.url'; strings, they will use 'regular expressions' from python:
+
+'r', which means raw, so we can include back slashes
+' ', within quotes is where you put the regular expresion and other parameters that make it up
+'^', CARET, which represents the beginning of the string,
+'$', which represents the ending point or the string
+
+For example, in url pattern: django.conf.urls.url, urls are written:  url(r'^admin/', admin.site.urls),
+If admin in r'^admin/' is matched after http://localhost:8000/, then 'admin.site.urls' the administration version of
+Django, will be called, then displayed in the browser.  To load our hello_world function using the path method, we will
+match the helloworld entered in the browser and display our functions hello_world answer, by passing the request, which
+is 'Hello World!'.  Notice, when using the path method from the from django.urls import path, we DO NOT use regular
+expressions in our path():
+
+path('helloworld/', hello_world),
+
+Next we return to the project sampsite where manage.py is, in terminal and start the server if you have not already done
+so, abd run the server:
+
+cd..
+
+python manage.py runserver
+
+Now type this address into your browser to see your hello world:
+
+http://localhost:8000/helloworld/
+
+Next we will return to our views.py file to enter a view function for our root address:
+
+def root_page(request):
+    # this will be returned if http://localhost:8000; Root Home Page
+    return HttpResponse('Root Home Page')
+
+Next go to the urls.py folder and enter the following to match our root folder. First enter root_page to our views
+import:
+
+from .views import hello_world, root_page
+
+Then in our url (path) pattern empty quotes to detect nothing, as the root, then pass in from function, 'root_page' using
+HttpResponse.
+
+path('', root_page),
+
+Next we will make a more complicated function using random.
+
+# L2 user request a random number 0 - 100 from url or random_number default is 100
+def random_number(request, max_rand=100):
+
+    # get user number, turn it into an integer from a string entry
+    random_num = random.randrange(0, int(max_rand))
+
+    # get the string %s entered by the user and return %d the random number, get our different values (max_rand, random_num)
+    msg = '<h1>Random Number Between 0 and %s : %d</h1>' % (max_rand, random_num)
+
+    return HttpResponse(msg)
+
+We will first import re_path into our sampsite/urls.py file.  Unlike 'path', it allows us to use regular expressions
+in our urlpatterns, which are needed for some mathematical, setup options.
+
+from django.urls import include, re_path
+
+The re_path import also support the 'include' module for import.  We will be using 'include' later on in this lesson.
+
+On our urls.py file, enter the function we will be using 'random_number' in our views imports
+
+from .views import hello_world, root_page, random_number
+
+Then enter the urlpattern using re_path the same way that is instructed for 'django.conf.urls.url' "deprecated", in the
+lesson.  First we will start with our r for raw, then quotes, then within the quotes the page url then a forward slash.
+Then to continue for the entry so a max_num by the user, or the use of the default, we enter inside of this , decimal
+(\d+)$' so that the users entry will be passed in.  Put these two urlpatterns in this order, so the users entry will be
+matched first, then if nothing is entered the default will be used:
+
+    # the chronological order of these two statement matters
+    re_path(r'^random/(\d+)$', random_number),
+    re_path(r'^random/', random_number),
+
+The urlpatterns using 'path' also takes two lines one to handle no number entered in the url address (random/10000) and
+one to handle only (random/) entered, so the default max_num, (100) will be used.
+
+    # random number entered in url by user 'random/1000'
+    # path('random/<int:max_rand>', random_number),
+    # no number entered by user, only 'random' in the url lets default, 100 be used
+    # path('random/', random_number),
+
+Next we will go into our setting.py file and look briefly at the installed apps:
+INSTALLED_APPS = [
+    # the django administration system
+    'django.contrib.admin',
+    # authentication system
+    'django.contrib.auth',
+    # framework for content types
+    'django.contrib.contenttypes',
+    # for our session framework
+    'django.contrib.sessions',
+    # message framework
+    'django.contrib.messages',
+    # reference for static files we have inside of our web application
+    'django.contrib.staticfiles',
+
+First we will go down and set up our TIME_ZONE.  We will use the browser to go to the wiki timezone page and pick our
+timezone out of the list and copy paste it in our settings:
+https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+We will use New_York for eastern standard time:
+
+TIME_ZONE = 'America/New_York'
+
+Next we will set up our path for static files.  We will set this right after our STATIC_URL = '/static/'  entry:
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+That's it, for settings, for now.
+
+Next we will set up views for our poll application.  So we will open views.py, in our polls directory.  Like the other
+views we worked on previously, we will need to import HttpResponse:
+
+# L2 use HttpResponse to pass info back view
+from django.http import HttpResponse
+
+Then we will set up our index for polls using a function, as we did previously:
+
+# L2 setup the index page here for the poll app
+def index(request):
+    return HttpResponse("<h2>You are in the polls index")
+
+We will now have to create a urls.py in the polls app directory, using pycharm, as we did previously with the views.py
+file:  Right click the poll directory, New, Python File, name it urls.
+
+urls.py
+
+We will copy paste this import from the sampsite/urls.py into the polls/urls.py
+
+# L2 instead of django.conf.urls.url "deprecated"
+# matches url in browser to url in project
+from django.urls import path
+
+Then we will add an import to the local views.py in the polls app using ' . ' meaning this directory
+
+from . import views
+
+We will also copy/paste our urlpatterns info from the sampsite/urls.py to polls/urls.py, change it to reflect our index,
+as empty '' as our root directory for the polls app, point it to views.index, and give it the name; index
+
+urlpatterns = [
+    # match 'whats in here with whats in the browser, then if matched, do tied in function, in views.py
+    path('', views.index, name='index'),
+    ]
+
+To make this work we will import another module into the sampsite/urls.py file, that will allow us to reference the url
+files that are in our polls application.
+
+from django.conf.urls import include
+
+In this same urls file we will make a url path pattern using include to reference the root of our polls app., and pull
+it into our main project.
+
+    path('polls/', include('polls.urls')),
+
+
+Next we will jump back to settings.py, to setup out polls app we just made.  We will add the following, to our
+INSTALLED_APPS =  field:
+
+'polls.apps.PollsConfig',
+
+Next, in settings we will set up our database.  We will be using the SQLite database which is the default.  If we want to
+change to a different data base, lets say oracle, we just need to change this line:
+
+'ENGINE': 'django.db.backends.sqlite3',
+
+To this line, for oracle
+
+'ENGINE': 'django.db.backends.oracle',
+
+If you use a different database, other than SQLite, you will most likely need to have a user name/password for a host.
+
+
+Now we will work on our models.py in our polls app directory.  We will be following the polls example from the django
+website.  First we will import datetime and also the timezone modules.  There also is a models import, that was included
+in models.py, when it was generated:
+
+from django.db import models
+import datetime
+from django.utils import timezone
+
+Next we will create our models; each model consisting of a class with class variables that represent fields, in our
+database.  We will set the column names and data types then allow the database to create the tables, afterwards.  First
+we will have a 'question' as well as choices that are going to be tied into it:
+
+class Question(models.Model):
+
+Inside this table we will a database column, with a CharField datatype text field with a maximum of 200 characters.
+After that, we will define a publication date, as an excuse to play around with our database:
+
+    # define a database column with datatype CharField,
+    # max length of character field entry
+    question_text = models.CharField(max_length=200)
+
+    # publish date field, and set up datetime to be more readable
+    pub_date = models.DateTimeField('date published')
+
+
+Next we will make another model class for Choice:
+
+# L2 different choices for our Questions class
+class Choice(models.Model):
+
+    # define each choice is related to a single question
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+
+    # define text for our choice
+    choice_text = models.CharField(max_length=200)
+
+    # which is the most popular choice, for each question by vote
+    votes = models.IntegerField(default=0)
+
+After we just define our model, above, we need to include our app in our project, that we already did earlier, in
+settings.py "
+INSTALLED_APPS =  field:
+'polls.apps.PollsConfig',
+"
+
+Next to let Django know of our changes, we will go to the cmd prompt and migrate our changes.  Enter the following in
+the cmd prompt, that does not have the server running and is located in the sampsite directory where manage.py resides.
+This will create a template that django will use to do the actual migrations.
+Use:
+python manage.py makemigrations                     # or to make specific table migrations in your database
+python manage.py makemigrations <the package name>  # 'music' in this project. reflect changes to blueprint
+                                                    # sql in database, CREATES a change file;
+
+python manage.py makemigrations polls
+
+OUTPUT FROM CMD PROMPT:
+
+ polls\migrations\0001_initial.py
+    - Create model Question
+    - Create model Choice
+
+To see the sql used to create our tables use:
+
+python manage.py sqlmigrate  <name of app> <the id from makemigrations>
+
+python manage.py sqlmigrate polls 0001
+
+****** See cmd prompt log to see the details. ******
+
+To do the actual migrations type this into cmd prompt:
+
+python manage.py migrate
+
+****** See cmd prompt log to see the details. ******
+
+Next we will add data to our newly updated database using shell, in cmd prompt:
+
+python manage.py shell
+
+OUTPUT FROM CMD PROMPT:
+
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>>
+
+We will now import our local models; Questions and Choice, from polls, in here:
+
+from polls .models import Question, Choice
+
+Display all of the questions we have defined so far, which is none so far:
+
+Question.objects.all()
+
+Output:
+<QuerySet []>
+
+To create a question about timezones we will first have to import the timezone module from our database:
+
+from django.utils import timezone
+
+Then create the question, define the questions' text, and the publications date, from the timezone:
+
+
+Save the question to the database:
+
+q.save()
+
+Get the questions id or pk:
+
+q.id
+q.pk
+
+OUTPUT:
+1
+
+Get the questions text:
+
+q.question_text
+
+OUTPUT:
+
+'Whats New?'
+
+Get the publication date:
+
+q.pub_date
+
+OUTPUT (is wrong for some unknown reason):
+
+datetime.datetime(2020, 4, 24, 0, 25, 51, 903813, tzinfo=<UTC>)
+
+Change the question:
+
+q.question_text="What's Up?"
+
+Always save after a change:
+q.save()
+
+See what the question is again:
+
+q.question_text
+
+OUTPUT:
+"What's Up?"
+
+Now do 'Question.objects.all()'
+
+OUTPUT:
+
+<QuerySet [<Question: Question object (1)>]>
+
+In the last output from the Question.objects.all() there are not many details.  We will go into our models.py, and in
+our Question class we will add:
+
+    # to get more details when returning an answer from this object
+    def __str__(self):
+        return self.question_text
+
+We will also add a custom method to see if the question was published recently:
+
+# see if the question was published recently or not
+        def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+Next we will do the same thing to the Choice object, with a few relevant changes and will omit the published date:
+
+    # to get more details when returning an answer from this object
+    def __str__(self):
+        return self.choice_text
+
+Now we will go back to the cmd prompt within the shell and see if the questions elaborate more.  First we will restart
+shell by typing:
+
+quit()
+
+Then restart it with: python manage.py shell
+
+Then we have to enter the import Question module dependency again: from polls .models import Question, Choice
+Now we will do another: Question.objects.all()
+
+OUTPUT:
+
+<QuerySet [<Question: What's Up?>]>
+
+To find the question using an id we use:
+
+Question.objects.filter(id=1)
+
+OUTPUT:
+
+<QuerySet [<Question: What's Up?>]>
+
+We can get the question that starts with a specific string, using two underscores to separate the relations the types
+of information:
+
+Question.objects.filter(question_text__startswith='what')
+
+OUTPUT:
+
+<QuerySet [<Question: What's Up?>]>
+
+Get the question published year, by first entering the timezone import from django.utils import timezone
+then enter:
+
+current_year = timezone.now().year
+
+Then get the question that fits within the published date criteria using get:
+
+Question.objects.get(pub_date__year=current_year)
+
+OUTPUT:
+
+Question: What's Up?>
+
+If you ask for something that doesn't exist using get:
+
+Question.objects.filter(id=2)
+
+You get an exception raised which is a bunch of info with:
+
+....'polls.models.Question.DoesNotExist: Question matching query does not exist.'
+
+at the end of the output returned.
+
+We can use a primary key to look for the question:
+
+Question.objects.get(pk=1)
+
+OUTPUT:
+
+<Question: What's Up?>
+
+To call for our special function to see if is recent we will enter the primary key:
+
+pq = Question.objects.get(pk=1)
+
+Then enter:
+
+pq.was_published_recently
+
+OUTPUT:
+
+True
+
+Lookup choices, that have been tied to our question:
+
+pq.choice_set.all()
+...
+<QuerySet []>
+
+Shell uses the pk number, for searching for choices using set, that we set earlier in pq =  .We got an empty set while
+looking for choices because we have not added any yet.  To add choices:
+
+q.choice_set.create(choice_text='not much', vote=0)
+q.choice_set.create(choice_text='the sky', vote=0)
+q.choice_set.create(choice_text='the clouds', vote=0)
+
+Now that we have choices entered we can get them all using set:
+
+>>> q.choice_set.all()
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>, <Choice: the clouds>]>
+
+We can display the number of choices:
+
+>>> q.choice_set.count()
+4
+
+Show choices for questions published this year:
+
+>>> Choice.objects.filter(question__pub_date__year=current_year)
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>, <Choice: the clouds>]>
+
+We can also delete an entered choice, by first entering:
+
+c = q.choice_set.filter(choice_text__startswith='the clouds')
+
+then:
+
+>>> c.delete()
+(1, {'polls.Choice': 1})
+
+Checking deletion:
+
+>>> q.choice_set.all()
+<QuerySet [<Choice: not much>, <Choice: not much>, <Choice: the sky>]>
+
+Yes it worked!
+
+
+
+
+******************** highlights from the comments area ********************
+
+
+
+
+
+
