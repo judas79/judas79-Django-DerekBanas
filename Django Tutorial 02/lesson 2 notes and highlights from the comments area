@@ -564,3 +564,140 @@ Yes it worked!
 
 
 
+Hi. I can't import url, only path. It's depriciated and unsupported anymore? Is it possible somehow use regular
+expression with path? Even when I add simple $ in the end it doesn't match anymore
+
+
+For future students since this thread is 2 years old use re_path if you want to continue using regular expressions.  It
+also includes, include, which is used in this lesson.
+from django.urls import include, re_path
+
+
+
+
+
+what is mysql?
+
+
+A database. Here is a tutorial https://youtu.be/yPu6qV5byu4
+
+
+
+
+
+
+why used namespace in pools.urlpatterns url() option?
+
+
+So you can avoid confusion when you have the same directory / function name in multiple apps in your project
+
+
+url(r'^random/(\d+)/$', random_number,name="random_number")
+how can I make optioanl route ?
+localhost:8000/random/ got an error .
+if any value does not pass , default value will be used. can I?
+
+
+I assume this will work with url;  I had to use re_path with Django v3:
+re_path(r'^random/', random_number_default),
+
+
+
+
+
+
+why used namespace in pools.urlpatterns url() option?
+
+
+So you can avoid confusion when you have the same directory / function name in multiple apps in your project
+
+
+url(r'^random/(\d+)/$', random_number,name="random_number")
+how can I make optioanl route ?
+localhost:8000/random/ got an error .
+if any value does not pass , default value will be used. can I?
+
+I assume this will work with url;  I had to use re_path with Django v3.   Add this below the urlpattern that matches
+the users max_num entry:
+    re_path(r'^random/(\d+)$', random_number),
+    re_path(r'^random/', random_number_default),
+
+
+
+
+
+
+where was that choice_set field defined?
+
+
+Django defined it. Django creates a set to hold the "other side" of a ForeignKey relation
+(e.g. a question's choice) which can be accessed via the API.
+
+
+
+
+
+
+
+Can I use Mongo.db with django?
+
+
+Yes
+
+
+
+
+
+
+Hello!
+I have a problem. When I try to import fom django.http I get this error: no module named django
+
+
+Try reinstalling like I cover in the 1st video
+
+
+I installed it like in the first video, the problem was with PyCharm, I didn't select the virtual environment as
+interpreter
+
+
+
+
+
+
+
+how would i change the name of a table i accidentally put question_test and ran the sqlmigrate
+
+
+Everything you need is here
+https://www.youtube.com/watch?v=QjICgmk31js&feature=youtu.be
+
+
+
+
+in the cmd of windows I type py instead of python: py manage.py runserver.
+
+
+
+
+
+Changed url to path in Django 2, and the method for passing a variable is adding <int:variable_name>
+for example: path('random/<int:max_rand>', random_number)
+
+
+In addition, adding re_path will allow for regex
+
+
+
+I landed up adding another urlpattern path, to handle the circumstance when only random, is entered, without a number,
+so I wouldn't get a 404 and the default is used, as well as what Saret recommended.
+
+
+path('random/<int:max_rand>', random_number),
+
+path('random/', random_number),
+
+
+
+
+
+
