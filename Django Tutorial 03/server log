@@ -1,0 +1,1008 @@
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 72
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 75
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 75
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 75
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 76
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 76
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 76
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916
+, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864
+, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.p
+y", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\co
+mmands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\ba
+se.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regist
+ry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.p
+y", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.p
+y", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py"
+, line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48
+, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", lin
+e 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py",
+ line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in
+ <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 76
+    else:
+       ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 29, 2020 - 16:21:54
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[29/Apr/2020 16:25:58] "GET /polls/ HTTP/1.1" 200 547
+[29/Apr/2020 16:26:10] "GET /polls/1/detail/ HTTP/1.1" 200 2519
+Internal Server Error: /polls/1/vote/
+Traceback (most recent call last):
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1772, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: 'choice.id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 63, in vote
+    selected_choice = question.choice_set.get(pk=request.POST['choice'])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 404, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 904, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\query.py", line 923, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\sql\query.py", line 1350, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\sql\query.py", line 1381, in _add_q
+    check_filterable=check_filterable,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\sql\query.py", line 1311, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\sql\query.py", line 1165, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\lookups.py", line 22, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\lookups.py", line 72, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\db\models\fields\__init__.py", line 1776, in get_prep_value
+    ) from e
+ValueError: Field 'id' expected a number but got 'choice.id'.
+[29/Apr/2020 16:26:32] "POST /polls/1/vote/ HTTP/1.1" 500 126139
+

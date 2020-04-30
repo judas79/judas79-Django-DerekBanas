@@ -1,0 +1,506 @@
+We will continue where we left off in tutorial 2, and work on the admin, part of Django, the database, templates, and
+cover form processing.
+
+# ---------- /polls/admin.py ----------
+
+# 1 Django automates the interface used to add, change
+# and delete content.  Before you can use it you need to create a user.
+# cd to sampsite directory (where manage.py resides)
+# To create a user :
+# python manage.py createsuperuser
+# Username: admin
+# Email address: db@compuserve.com
+# Enter passwords
+# OUTPUT: Superuser created successfully.
+
+# 1 Run the server : python manage.py runserver
+# in your browser
+# Open localhost:8000/admin
+# enter your name and password 'log in'
+# We can now work with our database.  Notice there is no reference to polls on this page.
+
+# 1 You can change any of the options and click History
+# to see a list of the changes
+# You can also add or delete questions
+# 1 Tell admin that our poll system has an admin interface.  We will add a python file to our polls directory, by right
+# clicking polls, New, Python file and name admin.  (if there isn't already a admin.py in the polls directory)
+# ie in polls/admin.py
+# 1 Now add more views in polls/admin.py
+
+# L3 this import was already here
+from django.contrib import admin
+
+# L3 Register your models that will sho up here.
+from .models import Question
+
+# L3 register Question to show up in the admin portion of the site
+admin.site.register(Question)
+# We can not use +Add, to add questions in our admin console or change them using Change. Click the Change button and
+# you will see the question we entered into Question in lesson 2 'Whats Up?'
+
+# ---------- /polls/views.py ----------
+# Open up views.py in the polls directory.
+# L2 use HttpResponse to pass info back view
+from django.http import HttpResponse
+
+# (7 Code Layout) Opens a 404 page if get doesn't supply a result
+from django.shortcuts import get_object_or_404
+
+# (2 code layout) Each view is represented by a function.  We will create two more functions to add functionality one to
+# handle the details of the Question function and any Choices it may have, as well as one to handle the Choices, which will
+# display the Questions results.  We already made the 'index' function, which we will modify, in this views file lesson,
+# to handle displaying the latest Question.
+
+# created L2, which we will update to have new functionality :
+# index : Display the latest questions
+# We will create :
+# detail : Display the question and the choices
+# results : Display question results
+
+# - Original index function
+'''
+def index(request):
+    return HttpResponse("You're in the polls index")
+'''
+# L3 setup the detail page to display questions and choices, pass in assigned id; for the poll app
+def detail(request, question_id):
+    return HttpResponse("<h2>You are looking at question %s</h2>" % question_id)
+
+# L3 setup the results page to display the Question results, pass in the id that is assigned; for the poll app
+
+def results(request, question_id):
+    response = "<h2>You are looking at question %s</h2>"
+    return HttpResponse(response % question_id)
+
+# Next we will go to our urls.py in our polls directory and add the urlpatterns for our 2 new functions.  First we will
+# get the Question ID.  When we are using regular expressions, things that are in parenthesis are returned; first we get
+# the id, this; <question_id> defines the data name, in this case it the id that we will be taking from it, then; [0-9]+
+# is numerically, whet we expect to receive, which is one or more numbers:
+
+    # L3 polls/detail, using the question id
+    re_path(r'^(P<question_id>[0-9]+)$', views.detail, name='detail'),
+
+# We will set up, finding the results function, in a similar way, then add /results/ to the regular expresion:
+
+Next we will add a namespace to this same urls.py, below the imports.  This will let Django know what directory to load
+if for example, another application had the same name, lets say results, so it know which one to use.
+
+app_name = 'polls'
+
+Now we will return to our views.py in the polls directory and import from out locally oriented models.py our functions;
+Question and Choice, as part of the process to give them functionality
+# (4 code layout)
+# Import Question and Choice from our models file
+
+from .models import Question, Choice
+
+# Then to modify our index function, so we can print out to screen, some questions, that we can click on them and jump
+# into the details, and results part of our app.
+# (4 code layout) New index function
+def index(request):
+
+    # L3 Receive a list of 5 [:5] questions ordered by date.
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+
+    # 4 Cycle through the questions to create a list, separated by comas ', '
+    output = ', '.join([q.question_text for q in latest_question_list])
+
+    # Return the text to display
+    return HttpResponse(output)
+
+# L3 setup the detail page to display questions and choices, pass in assigned id; for the poll app
+def detail(request, question_id):
+    return HttpResponse("<h2>You are looking at question %s</h2>" % question_id)
+
+# L3 setup the results page to display the Question results, pass in the id that is assigned; for the poll app
+def results(request, question_id):
+    response = "<h2>You are looking at question %s</h2>"
+    return HttpResponse(response % question_id)
+
+# (4 code layout) This isn't the best solution because the results are
+# hard coded into the Python. Let's use a template to
+# separate the design from the code
+# Create a directory named templates in polls, New, directory name it
+templates
+# Create a directory named polls; right click on the templates directory, New, directory, and name it
+polls
+# Create a file named index.html in that polls directory; on polls/templates/polls, right click polls, New, HTML file,
+index.html
+# We will also create another two HTML template files, within this same directory for our other two functions; detail
+# and, results:
+detail.html
+results.html
+# Next open the index.html template file.
+# (6 code layout) Create a new index function that sends the 5 question list
+# to the template, so they will appear on the screen.  Using the Django language we will achieve this with an if
+statement:
+
+{% if latest_question_list %}
+
+# We will us django's script, for parts of the template.  Django statements are within either {{ }} two squiggly brackets,
+# on either side of a squiggly bracket and a percent sign, on either side.  If and for statements consist of the squiggly
+# bracket and percent sign on each side, and terminate with a prefix of end:
+
+{% endif %}
+{% endfor %}
+
+# Next we will move back to views.py.  In order to send more information to our template, we will have to get some more
+# imports:
+# This import renders a page when it is passed a template and
+# any data required by the template
+
+from django.shortcuts import render
+
+# next we will have to define a variable name, for the data that will be passed into the index statement.  We will call
+# context and it will contain 'latest_question_list': latest_question_list, which is what is being passed inside it.
+def index(request):
+    latest_question_list = Question.objects.order_by('-pub_date')[:5]
+
+    # (6 code layout) Define the name for the data to pass to the template
+    context = {
+        'latest_question_list': latest_question_list,
+    }
+
+# Now we can delete and replace the following:
+
+    output = ', '.join([q.question_text for q in latest_question_list])
+    return HttpResponse(output)
+
+# replace it with this:
+
+    # Render the page in the browser using the template and data required by the template
+    return render(request, 'polls/index.html', context)
+
+# restart the server: and go to http://127.0.0.1:8000/polls/ in your browser
+
+# (2 code layout) add these 3 updated views
+
+'''
+def detail(request, question_id):
+    return HttpResponse("You're looking at question %s" % question_id)
+'''
+
+'''
+def results(request, question_id):
+        response = "You're looking at the results of question %s"
+        return HttpResponse(response % question_id)
+'''
+# Next, at the top of the views.py file,  we will import a library to handle not found pages (404 errors); if we click on
+# a result, and there is nothing; we get a 404 page:
+
+from django.shortcuts import get_object_or_404
+
+# We will add the 404 handler to the details function.  When details is passed a question ID, it will check if it exists
+or not, then either send the user to that detail page or to a 404 page.
+def detail(request, question_id):
+
+    # (7 code layout)Check if the page exists, end user there, or display 404 page if not
+    question = get_object_or_404(Question, pk=question_id)
+
+    return render(request, 'polls/detail.html', {'question': question})
+
+# (7 code layout) Now create the detail.html template in templates/polls/
+# In /templates/polls right click polls, choose New, HTML file and name it detail, if you haven't already done so.
+# Within details.html we will show the question that has been passed, within heading tags:
+
+<h1>
+    {{question.question_text}}
+</h1>
+
+# Next we will set up, for instances when we get an error message.  We will handle errors with an if print it in  bold
+text, <strong> statement, and end the if statement:
+
+<!--if an error occurs show the error message-->
+{% if error_message %}}
+<p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+# Now we will jump back to polls/views.py to create a form, that we allow the user to pick a choice for the particular
+# question, below the results function named 'vote'.
+
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s" % question_id)
+
+# Now we will need to go to polls/urls.py, to make a urlpattern for the vote function template.
+
+    # L3 polls/vote, using the question id
+    re_path(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+
+# Next lets return to ou detail.html page and work on the form to pick a choice for the specified question passed in, by
+ id.
+
+
+
+# (7 code layout) Let's update detail to use a 404 page and template
+'''
+
+# 9 Now we will update vote() to except the choice picked
+
+# 9 Used to avoid receiving data twice from a form if the user
+# clicks the back button
+from django.http import HttpResponseRedirect
+
+# 9 Used to return a url we can point to based on the
+# current question we are dealing with
+from django.urls import reverse
+
+def vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+
+    # 9 Try to get the selected radio button
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+
+    except(KeyError, Choice.DoesNotExist):
+
+        # 9 Re-render the form
+        return render(request, 'polls/detail.html', {
+            'question': question,
+            'error_message': "You didn't select a choice"
+        })
+    else:
+
+        # 9 If a choice was selected increment it in the DB
+        selected_choice.votes += 1
+        selected_choice.save()
+
+        # 9 Protect from data being sent twice if user clicks back
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+# ---------- /polls/urls.py ----------
+
+from django.conf.urls import url
+
+from . import views
+
+# 3 Add a namespace so Django knows what directory to load
+# if another app has views with the same name
+app_name = 'polls'
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+    # 3 Add the 3 views
+    # The data surrounded by parentheses is sent to the function
+    # ?P<question_id> defines the name for the data within
+    # the parentheses
+    # [0-9]+ says we will match 1 or more numbers
+    url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
+    url(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results'),
+    url(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+]
+
+# 3 Now let's update polls/views.py
+
+# ---------- /polls/templates/polls/index.html ----------
+
+<!-- 5 If a list of questions is available create
+an unordered list of the questions or print
+that none are available -->
+{% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+            <li>
+                <!-- 5 url defines directory to open based
+                 on using the namespace defined in polls/urls.py
+                 and the url defined in sampsite/urls.py -->
+                <a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available</p>
+{% endif %}
+
+<!--  Back to polls/views.py to update index -->
+
+# ---------- /polls/templates/polls/detail.html ----------
+
+<!--(8 code layout) Display the question passed and the choices
+available -->
+
+<h1>{{question.question_text}}</h1>
+
+<!--  Display error message -->
+{% if error_message %}
+<p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+<!--  Create a form which allows users to pick a choice -->
+<!-- Point at the vote function in polls/views.py using
+# the namespace and pass the question id -->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+
+<!--  Protects your site from Cross Site Request Forgeries
+# which occur when another site tries to target your form, If your form is not being processed %100 percent within your
+# site, it will  block form information from being passed back and forth -->
+{% csrf_token %}
+
+<!--  Cycle through all choices for this question and
+# create a radio button for each choice.
+# access Question Choice; object then in the lowercase of class Question--> -->
+{% for choice in question.choice_set.all %}
+
+    <!-- Create radio buttons; When submitted the choice id is sent -->
+    <input type="radio" name="choice"
+           id="choice{{ forloop.counter }}"
+           value="{{ choice.id }}" />
+
+# Next we will create a label, for our radio button, getting counter to supply the number
+# use choice_text to display the label text, then throw in a break statement to separate the radio buttons
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+    <br>
+# end django for statement
+{% endfor %}
+
+# create a submit option button
+<input type="submit" value="Vote" />
+</form>
+
+<!-- (8 code layout)Now update the vote function in polls/views.py -->
+
+# First we will copy paste from the detail function, the 404 handler, into the vote function
+
+def vote(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+
+# Next to accept the choice of radio button clicked on, for a question, followed by the submit button click, we need to
+# add the following module import.  It will also prevent the user from making double submissions, for instance by using
+# the back button and submitting a form again:
+
+from django.http import HttpResponseRedirect
+
+# this module will allow us to return a url we can point to based on whatever the current question is
+
+from django.urls import reverse
+
+# Now we will go back down to work on the function, vote, so it can process, the 'votes', whenever they are clicked on.
+# We will use a try: statement to get the selected radio buttons
+
+# (9 code layout) Try to 'get' the selected radio button; get being what isn't always available.
+    try:
+        selected_choice = question.choice_set.get(pk=request.POST['choice'])
+
+# We will hand particularly the Choice.DoesNotExist error
+    except(KeyError, Choice.DoesNotExist):
+
+        # Re-render the form if Choice.DoesNotExist error is true, get passed request for details page (template)
+        # get passed in question, pass in error message "You..."
+        return render(request, 'polls/detail.html', {
+            'question': question,
+            'error_message': "You didn't select a choice"
+        })
+    else:
+
+        # If a choice was selected increment it in the DB
+        selected_choice.votes += 1
+        selected_choice.save()
+
+        # Protect from data being sent twice if user clicks back
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+# ---------- /polls/templates/polls/results.html ----------
+# Now, open the result file you made previously.  We will add functionality, to display our results here.
+<!-- (11 code layout} Displays choice results for the passed question -->
+# displays the question
+<h1>{{question.question_text}}</h1>
+
+<!-- Cycle through all the choices for the question -->
+<ul>
+    {% for choice in question.choice_set.all %}
+        <li>
+            <!-- Add a s to vote if not '1 vote'-->
+            {{choice.choice_text}} -- {{choice.votes}} vote{{choice.votes|pluralize}}
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'polls:detail' question.id %}">Vote Again</a>
+
+# Now we will update the results in the views file.
+
+    #get the question using the id that was passed, and 404 if not
+    question = get_object_or_404(Question, pk=question_id)
+
+    # pass in request, point to template 'results' pass information contained within question
+    return render(request, 'polls/results.html', {'question': question})
+
+
+
+
+
+
+************** highlights from the comments area ***************
+
+
+
+
+
+
+I'm stuck near the very end of this one.
+"NoReverseMatch at /polls/1/"
+"Error during template rendering"
+when i remove just the url vars from the form tag's action attb and leave empty quotes the page renders fine, but then
+obviously there's no path for the POST. I've been tracing my steps for 3hrs now ~ could sure use a little nudge in the
+right direction. my code is in this repo if anyone would be so kind:
+https://bitbucket.org/MilesJohnson777/django-sample-site/src
+
+
+nevermind! i found my typo. had question_id instead of question.id in the action attb.
+
+
+
+
+
+
+I copied all the files needed for this and it works pretty fine but i dont get any choices to select..
+i click on whats up
+and than i have no choices to select only the Vote button and when i heat it, says that "you didnt select any choice"
+my question is where do i set the choices?
+
+
+On the admin page you can add choices
+
+
+
+
+
+
+Why don't you mention that you must activate virtual environment if you are on Windows?
+
+
+It's not required on OSX or Linux?
+
+
+it's not, but the first reply in this thread will explain why you really should:
+http://askubuntu.com/questions/401132/how-can-i-install-django-for-python-3-x
+
+
+
+
+
+
+Sir,in my admin interface it is showing the error "A server error occurred.  Please contact the administrator."
+please help
+
+
+sir,the issue is resolved.
+there was some error in the timezone
+Thank you for such free educational videoes
+
+
+
+
+
+loving these tuts i've completed this far.. but when i select the votes.. its not incrementing all i keep getting is
+you did not select a choice
+
+
+so i fixed the issue i forgot to put in method="post" in my form lol
+
+
+
+
+
+
