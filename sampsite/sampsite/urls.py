@@ -42,8 +42,8 @@ urlpatterns = [
     # no number entered by user, only 'random' in the url lets default, 100 be used
     # path('random/', random_number),
     # the chronological order of these two statement matters
-    re_path(r'^random/(\d+)$', random_number),
-    re_path(r'^random/', random_number),
+    re_path(r'^random/(\d+)$', random_number, name='random_number'),
+    re_path(r'^random/', random_number, name='random_number_default'),
     # use import include to reference urls from poll app
     re_path('polls/', include('polls.urls')),
 ]

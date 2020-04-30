@@ -15,3 +15,7 @@ remained structurally the same up until then; we would rename it L1_to_L4_views.
 
 Share these files freely, for this is just all meant to be an exercise in using: Django, PyCharm, and git within PyCharm
 pro, to access and organise my learning on git-hub.
+
+In some of the lessons text files, there will be references to Dereks' skeletal structure, (Code Layout), with a number
+in it (12 Code Layout).  This is from when Derek, was first organizing his code layout plan, as far as what was needed
+to achieve how the site would be organised.
