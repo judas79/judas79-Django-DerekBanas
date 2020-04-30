@@ -1,0 +1,19 @@
+<!--if there is a list of latest_question_list then...-->
+{% if latest_question_list %}
+<!--we will us an unordered list and a for statement to iterate through the list-->
+    <ul>
+        {% for question in latest_question_list %}
+        <!--in list item, questions in latest_question_list as links, using the name space in polls urls.py -->
+            <li>
+            <!--We get the question from text using {{question.question_text}}-->
+                <a href="{% url 'polls:detail' question.id %}">{{question.question_text}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+<!--in case the if statement doesn't find a list of latest_question_list-->
+{% else %}
+<!--write within paragraph tags-->
+    <p>No polls lists, are available</p>
+{% endif %}
+
+<!---->

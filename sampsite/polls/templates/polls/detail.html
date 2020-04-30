@@ -1,0 +1,35 @@
+<!--L3 -->
+<h1>{{ question.question_text }}</h1>
+
+<!-- L3 if an error occurs show the error message-->
+{% if error_message %}}
+<p><strong>{{error_message}}</strong></p>
+{% endif %}
+
+<!-- L3 Create a form which allows users to pick a choice -->
+<!-- Point at the vote function in polls/views.py using the namespace and pass the question id -->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+
+<!-- L3 Protects your site from Cross Site Request Forgeries which occur when another site tries to target your form -->
+{% csrf_token %}
+
+<!--  L3Cycle through all choices for this question and create a radio button for each choice
+access Question Choice; object then in the lowercase of class Question-->
+{% for choice in question.choice_set.all %}
+
+    <!-- L3 Create radio buttons; When submitted the choice id is sent -->
+    <!-- 'radio' is a radio button, choice for id is specific derived from the counter-->
+    <input type="radio" name="choice"
+           id="choice{{ forloop.counter }}" value="{{choice.id}}"/>
+
+    <!-- L3 Next we will create a label, iterate for our radio button, getting counter to supply the number
+    use choice_text to display the label text, then throw in a break statement to separate the radio buttons-->
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+    <br>
+<!--end for loop-->
+{% endfor %}
+
+<!-- create a submit option button-->
+<input type="submit" value="Vote" />
+</form>
+<!---->
