@@ -1,0 +1,1008 @@
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line
+48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", l
+ine 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5,
+in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 53
+
+    def vote(request, question_id):
+      ^
+IndentationError: expected an indented block
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 9
+16, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 8
+64, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regi
+stry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line
+48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", l
+ine 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5,
+in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 53
+
+    def vote(request, question_id):
+      ^
+IndentationError: expected an indented block
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 9
+16, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 8
+64, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regi
+stry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line
+48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", l
+ine 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5,
+in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 47
+
+    class ResultsView(generic.DetailView)
+                                        ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 9
+16, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 8
+64, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regi
+stry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line
+48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", l
+ine 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5,
+in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 47
+
+    class ResultsView(generic.DetailView)
+                                        ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 30, 2020 - 23:36:06
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Not Found: /music/
+[30/Apr/2020 23:50:43] "GET /music/ HTTP/1.1" 404 2552
+Not Found: /favicon.ico
+[30/Apr/2020 23:50:44] "GET /favicon.ico HTTP/1.1" 404 2567
+[30/Apr/2020 23:50:57] "GET /polls/ HTTP/1.1" 200 540
+[30/Apr/2020 23:51:03] "GET /polls/1/ HTTP/1.1" 200 2401
+[30/Apr/2020 23:51:11] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[30/Apr/2020 23:51:11] "GET /polls/1/results/ HTTP/1.1" 200 524
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 30, 2020 - 23:52:13
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[30/Apr/2020 23:52:17] "GET /polls/1/ HTTP/1.1" 200 2401
+Internal Server Error: /polls/1/vote/
+Traceback (most recent call last):
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ex
+ception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ba
+se.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ba
+se.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 77
+, in vote
+    selected_choice.votes += 1
+AttributeError: 'Choice' object has no attribute 'votes'
+[30/Apr/2020 23:52:41] "POST /polls/1/vote/ HTTP/1.1" 500 71638
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 30, 2020 - 23:53:01
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[30/Apr/2020 23:53:13] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[30/Apr/2020 23:53:13] "GET /polls/1/results/ HTTP/1.1" 200 524
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 01, 2020 - 15:19:09
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[01/May/2020 15:19:14] "GET /polls/1/results/ HTTP/1.1" 200 524
+[01/May/2020 15:19:18] "GET /polls/1/ HTTP/1.1" 200 2401
+[01/May/2020 15:19:22] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[01/May/2020 15:19:22] "GET /polls/1/results/ HTTP/1.1" 200 524
+[01/May/2020 15:21:36] "GET /polls/1/results/ HTTP/1.1" 200 524
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 01, 2020 - 15:21:43
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[01/May/2020 15:21:50] "GET /polls/1/ HTTP/1.1" 200 2401
+Internal Server Error: /polls/1/vote/
+Traceback (most recent call last):
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ex
+ception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ba
+se.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\handlers\ba
+se.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 77
+, in vote
+    selected_choice.votes += 1
+AttributeError: 'Choice' object has no attribute 'votes'
+[01/May/2020 15:22:07] "POST /polls/1/vote/ HTTP/1.1" 500 71651
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 01, 2020 - 15:23:08
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[01/May/2020 15:23:13] "POST /polls/1/vote/ HTTP/1.1" 302 0
+[01/May/2020 15:23:13] "GET /polls/1/results/ HTTP/1.1" 200 524
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\models.py changed, reloadi
+ng.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 9
+16, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 8
+64, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+commands\runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 76, in raise_last_exception
+    raise _exception[1]
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+__init__.py", line 357, in execute
+    autoreload.check_errors(django.setup)()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\__init__.py", li
+ne 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\apps\registry.py
+", line 114, in populate
+    app_config.import_models()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\apps\config.py",
+ line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 781, in get_code
+  File "<frozen importlib._bootstrap_external>", line 741, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\models.py", line 3
+3
+    class Choice(models.Model):
+                              ^
+IndentationError: expected an indented block
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\models.py changed, reloadi
+ng.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 01, 2020 - 17:54:34
+[01/May/2020 18:43:13] "GET /polls/1/ HTTP/1.1" 200 2401
+[01/May/2020 18:43:13] "GET /polls/ HTTP/1.1" 200 540
+[01/May/2020 18:43:16] "GET /polls/ HTTP/1.1" 200 540
+[01/May/2020 18:43:36] "GET /polls/1/ HTTP/1.1" 200 2401
+[01/May/2020 18:43:36] "GET /polls/1/ HTTP/1.1" 200 2401
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", line 775, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+[01/May/2020 18:43:36] "GET /polls/1/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 54870)
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 138, in run
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", line 775, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 141, in run
+    self.handle_error()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\basehttp.py", line 119, in handle_error
+    super().handle_error()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", line 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", line 696, in __init__
+    self.handle()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\basehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\basehttp.py", line 197, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py", line 144, in run
+    self.close()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\basehttp.py", line 114, in close
+    super().close()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 02, 2020 - 18:27:41
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\commands\runserver.py", line 1
+17, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_ch
+ecks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_chec
+ks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.py", line 40, in check_url_na
+mespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.py", line 57, in _load_all_na
+mespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_modul
+e
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 38
+    return Question.
+                   ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 02, 2020 - 18:37:05
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\commands\runserver.py", line 1
+17, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\base.py", line 382, in _run_ch
+ecks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\registry.py", line 72, in run_chec
+ks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.py", line 40, in check_url_na
+mespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls.py", line 57, in _load_all_na
+mespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.py", line 581, in urlconf_modul
+e
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line 48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5, in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 42
+    class DetailView(generic.DetailView):
+        ^
+SyntaxError: invalid syntax
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 02, 2020 - 18:44:07
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\admin.py changed, reloading.
+Watching for file changes with StatReloader
+
+System check identified no issues (0 silenced).
+May 02, 2020 - 18:53:53
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[02/May/2020 18:55:10] "GET /admin/ HTTP/1.1" 200 4155
+[02/May/2020 18:55:10] "GET /admin/ HTTP/1.1" 200 4155
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 138, in run
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", lin
+e 775, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the sof
+tware in your host machine
+[02/May/2020 18:55:11] "GET /admin/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('127.0.0.1', 57870)
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 138, in run
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 332, in send_headers
+    self.send_preamble()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 255, in send_preamble
+    ('Date: %s\r\n' % format_date_time(time.time())).encode('iso-8859-1')
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 453, in _write
+    result = self.stdout.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", lin
+e 775, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the sof
+tware in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 141, in run
+    self.handle_error()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\bas
+ehttp.py", line 119, in handle_error
+    super().handle_error()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 368, in handle_error
+    self.finish_response()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 180, in finish_response
+    self.write(data)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 274, in write
+    self.send_headers()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", lin
+e 639, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", lin
+e 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\socketserver.py", lin
+e 696, in __init__
+    self.handle()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\bas
+ehttp.py", line 172, in handle
+    self.handle_one_request()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\bas
+ehttp.py", line 197, in handle_one_request
+    handler.run(self.server.get_app())
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\handlers.py",
+ line 144, in run
+    self.close()
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\servers\bas
+ehttp.py", line 114, in close
+    super().close()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\wsgiref\simple_server
+.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[02/May/2020 18:55:12] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[02/May/2020 18:55:12] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[02/May/2020 18:55:12] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[02/May/2020 18:55:12] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[02/May/2020 18:55:13] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[02/May/2020 18:55:13] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[02/May/2020 18:55:18] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200
+ 85876
+[02/May/2020 18:55:18] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86
+184
+[02/May/2020 18:55:18] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 8
+5692
+[02/May/2020 18:56:33] "GET /admin/polls/choice/ HTTP/1.1" 200 4772
+[02/May/2020 18:56:33] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 18:56:33] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6190
+[02/May/2020 18:56:36] "GET /static/admin/js/core.js HTTP/1.1" 200 5723
+[02/May/2020 18:56:36] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[02/May/2020 18:56:36] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[02/May/2020 18:56:36] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[02/May/2020 18:56:36] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200
+6918
+[02/May/2020 18:56:36] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[02/May/2020 18:56:36] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 1288
+20
+[02/May/2020 18:56:37] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 280364
+
+[02/May/2020 18:56:37] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[02/May/2020 18:56:49] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 18:56:49] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 18:56:49] "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+[02/May/2020 18:56:49] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[02/May/2020 18:56:49] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10322
+[02/May/2020 18:56:49] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[02/May/2020 18:56:57] "GET /admin/polls/choice/ HTTP/1.1" 200 4772
+[02/May/2020 18:56:59] "GET /admin/ HTTP/1.1" 200 4155
+[02/May/2020 18:57:04] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 18:57:04] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 18:57:51] "POST /admin/polls/choice/add/ HTTP/1.1" 302 0
+[02/May/2020 18:57:51] "GET /admin/polls/choice/ HTTP/1.1" 200 5179
+[02/May/2020 18:57:51] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 18:57:52] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[02/May/2020 18:58:33] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 18:58:36] "GET /admin/ HTTP/1.1" 200 4474
+[02/May/2020 19:01:50] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 19:01:51] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:02:44] "POST /admin/polls/choice/add/ HTTP/1.1" 302 0
+[02/May/2020 19:02:44] "GET /admin/polls/choice/ HTTP/1.1" 200 5396
+[02/May/2020 19:02:44] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:03:06] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 19:03:06] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:03:13] "GET /admin/polls/choice/ HTTP/1.1" 200 5212
+[02/May/2020 19:03:15] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5628
+[02/May/2020 19:03:18] "GET /admin/ HTTP/1.1" 200 4758
+[02/May/2020 19:03:21] "GET /admin/polls/question/ HTTP/1.1" 200 4359
+[02/May/2020 19:03:21] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:03:26] "GET /admin/polls/question/add/ HTTP/1.1" 200 4844
+[02/May/2020 19:03:27] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:03:27] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[02/May/2020 19:03:27] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 202
+32
+[02/May/2020 19:03:28] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[02/May/2020 19:03:28] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[02/May/2020 19:03:53] "POST /admin/polls/question/add/ HTTP/1.1" 200 5040
+[02/May/2020 19:03:53] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:04:03] "POST /admin/polls/question/add/ HTTP/1.1" 302 0
+[02/May/2020 19:04:03] "GET /admin/polls/question/ HTTP/1.1" 200 4807
+[02/May/2020 19:04:04] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:04:10] "GET /admin/polls/question/2/change/ HTTP/1.1" 200 5144
+[02/May/2020 19:04:10] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:04:22] "GET /admin/polls/question/ HTTP/1.1" 200 4600
+[02/May/2020 19:04:29] "GET /admin/polls/question/add/ HTTP/1.1" 200 4844
+[02/May/2020 19:04:32] "GET /admin/polls/question/ HTTP/1.1" 200 4600
+[02/May/2020 19:04:34] "GET /admin/ HTTP/1.1" 200 5065
+[02/May/2020 19:04:37] "GET /admin/polls/choice/ HTTP/1.1" 200 5212
+[02/May/2020 19:04:37] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:04:42] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5685
+[02/May/2020 19:04:42] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:07:02] "GET /polls/ HTTP/1.1" 200 845
+[02/May/2020 19:07:09] "GET /polls/2/ HTTP/1.1" 200 814
+[02/May/2020 19:07:13] "POST /polls/2/vote/ HTTP/1.1" 200 872
+[02/May/2020 19:07:24] "POST /polls/2/vote/ HTTP/1.1" 200 872
+[02/May/2020 19:07:26] "POST /polls/2/vote/ HTTP/1.1" 200 872
+[02/May/2020 19:07:44] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5685
+[02/May/2020 19:07:58] "POST /admin/polls/choice/add/ HTTP/1.1" 302 0
+[02/May/2020 19:07:58] "GET /admin/polls/choice/ HTTP/1.1" 200 5609
+[02/May/2020 19:07:58] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:08:09] "GET /admin/polls/choice/add/ HTTP/1.1" 200 5685
+[02/May/2020 19:08:09] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:08:35] "POST /admin/polls/choice/add/ HTTP/1.1" 302 0
+[02/May/2020 19:08:35] "GET /admin/polls/choice/ HTTP/1.1" 200 5825
+[02/May/2020 19:08:36] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/May/2020 19:08:42] "GET /polls/ HTTP/1.1" 200 845
+[02/May/2020 19:08:47] "GET /polls/2/ HTTP/1.1" 200 1872
+[02/May/2020 19:08:52] "POST /polls/2/vote/ HTTP/1.1" 302 0
+[02/May/2020 19:08:52] "GET /polls/2/results/ HTTP/1.1" 200 419
+[03/May/2020 16:46:50] "GET /polls/2/ HTTP/1.1" 200 1872
+[03/May/2020 16:46:58] "POST /polls/2/vote/ HTTP/1.1" 302 0
+[03/May/2020 16:46:59] "GET /polls/2/results/ HTTP/1.1" 200 419
+Not Found: /sampsite
+[03/May/2020 16:47:22] "GET /sampsite HTTP/1.1" 404 2558
+[03/May/2020 16:48:01] "GET /admin/ HTTP/1.1" 200 5627
+[03/May/2020 16:48:02] "GET /admin/ HTTP/1.1" 200 5627
+[03/May/2020 16:48:13] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[03/May/2020 16:48:14] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[03/May/2020 16:48:14] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[03/May/2020 16:48:14] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[03/May/2020 16:48:25] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 14542
+[03/May/2020 16:48:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[03/May/2020 16:48:29] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12318
+[03/May/2020 16:48:29] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5753
+[03/May/2020 16:48:30] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[03/May/2020 16:48:30] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[03/May/2020 16:48:30] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[03/May/2020 16:48:39] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[03/May/2020 16:48:40] "GET /admin/ HTTP/1.1" 200 5627
+[03/May/2020 16:48:43] "GET /admin/auth/user/ HTTP/1.1" 200 6619
+[03/May/2020 16:48:43] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[03/May/2020 16:48:50] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 14542
+[03/May/2020 16:48:51] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 9
+16, in _bootstrap_inner
+    self.run()
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 8
+64, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\autoreload
+.py", line 53, in wrapper
+    fn(*args, **kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+commands\runserver.py", line 117, in inner_run
+    self.check(display_num_errors=True)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 395, in check
+    include_deployment_checks=include_deployment_checks,
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\management\
+base.py", line 382, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\regi
+stry.py", line 72, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 40, in check_url_namespaces_unique
+    all_namespaces = _load_all_namespaces(resolver)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\core\checks\urls
+.py", line 57, in _load_all_namespaces
+    url_patterns = getattr(resolver, 'url_patterns', [])
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 588, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\utils\functional
+.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\resolvers.p
+y", line 581, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\sampsite\urls.py", line
+48, in <module>
+    re_path('polls/', include('polls.urls')),
+  File "C:\Users\Gina\PycharmProjects\Kivy\venv\lib\site-packages\django\urls\conf.py", l
+ine 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\importlib\__init__.py
+", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\urls.py", line 5,
+in <module>
+    from . import views
+  File "C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py", line 56
+
+    class ResultsView(generic.DetailView):
+                                         ^
+IndentationError: expected an indented block
+
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 03, 2020 - 17:48:12
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite\polls\views.py changed, reloadin
+g.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+May 03, 2020 - 18:01:10
+Django version 3.0.5, using settings 'sampsite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+

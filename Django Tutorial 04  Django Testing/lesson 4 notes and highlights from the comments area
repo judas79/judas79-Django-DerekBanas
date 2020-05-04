@@ -1,0 +1,648 @@
+In this part of my Django tutorial series we'll focus on Generic Views and Automated Testing. Through testing we can
+quickly check how are site is operating after each change. You can also simulate how the site will interact with a user
+depending upon an unlimited number of randomized inputs. With a little work up front you will save yourself from
+numerous future headaches.
+
+# In this lesson we will cover Generic views and Automated Testing.  We will start off
+# in polls/urls.py.  First of as usual 'python manage.py runserver' in terminal
+to start your server.
+
+# ---------- /polls/urls.py ----------
+
+# 1 Generic views are normally used from the beginning
+# and they help you avoid having to write a lot
+# of custom code.  We will fix these generic patterns so we can use generic views.
+
+# from django.conf.urls import url # this import has been depricated since django v2, use re_path
+from django.urls import re_path
+from . import views
+
+app_name = 'polls'
+
+# (1 code layout) We'll first change the index urlpattern from 'views.index,' to:
+# views.IndexView.as_view()
+
+# We will also change the detail view, by deleting '<question_id>' and replacing it with:
+<pk>
+# Then replace '/detail/$', views.detail,' with:
+views.DetailView.as_view(),
+
+# Then for the results view, replace <question> with
+<pk>
+# and replace 'views.results,' with:
+views.ResultsView.as_view()
+
+# We will leave our votes view, exactly the same as it was.
+
+urlpatterns = [
+    # re_path(r'^$', views.index, name='index'),
+    re_path(r'^$', views.IndexView.as_view(), name='index'),
+    # re_path(r'^(?P<question_id>[0-9]+)/detail/$', views.detail, name='detail'),
+    re_path(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+    # re_path(r'^(?P<question_id>[0-9]+)/results/$', views.results, name='results')
+    re_path(r'^(?P<pk>[0-9]+)/results/$', views.ResultsView.as_view(), name='results'),
+    re_path(r'^(?P<question_id>[0-9]+)/vote/$', views.vote, name='vote'),
+]
+
+# (1 code layout) Now remove our index, detail and results views in polls/views.py
+# First we will omit the 'detail' function by commenting it out.
+# We will leave the vote function, as it is.
+# We will also comment out the results and index functions.
+# Now we will have to create them for use with generic views.  So next, import module
+# for generic views:
+
+# ---------- /polls/views.py ----------
+
+# (2 code layout) Add the generic module
+from django.views import generic
+
+from django.http import HttpResponse
+
+from .models import Question, Choice
+
+from django.shortcuts import render
+
+from django.shortcuts import get_object_or_404
+
+from django.http import HttpResponseRedirect
+
+from django.urls import reverse
+
+# (8 code layout) Import so we can get time information
+from django.utils import timezone
+
+# After importing the module for generic views, we will work on a 'class'
+# to set up our list view:
+# (2 code layout)  The ListView displays your list of questions being, the
+# latest_question_list
+
+class IndexView(generic.ListView):
+
+# This points to the address location, of the template we are going to use, for the list:
+    template_name = 'polls/index.html'
+
+# (2 code layout)This defines the question list we want to use
+    context_object_name = 'latest_question_list'
+
+    # 8 Replace get_queryset and don't return questions
+    #  published in the future
+
+# function, for listing our questions, using Question model by order of date, but only the last 5
+
+    def get_queryset(self):
+
+        # 2 Return the last 5 questions entered
+        return Question.objects.order_by('-pub_date')[:5]
+
+****************** begin jump ****************
+    def get_queryset(self):
+
+        # 8 Return only questions with a pub_date less than
+        # or equal to now
+        return Question.objects.filter(
+            pub_date__lte=timezone.now()
+        ).order_by('-pub_date')[:5]
+
+        # 8 Add Choices to the Admin in admin.py
+
+****************** end jump *******************
+
+# (2 code layout) The DetailView displays the details on your object
+# being the Question model
+
+#  The generic view expects the pk (Primary Key) value
+# from the URL to be called pk as we set in polls/urls.py
+class DetailView(generic.DetailView):
+    model = Question
+
+# Define the path directory of the template to use with this data
+    template_name = 'polls/detail.html'
+
+****************** begin jump *******************
+    # 12 Exclude questions that are not published yet
+    def get_queryset(self):
+        return Question.objects.filter(pub_date__lte=timezone.now())
+****************** end jump *******************
+
+
+
+# (2 code layout) Get the results from the questions
+class ResultsView(generic.DetailView):
+
+    # define model we will be using for the details
+    model = Question
+
+    # define the path directory to the template we will use
+    template_name = 'polls/results.html'
+
+# (12 code layout)  Add tests in polls/tests.py
+# We could test the code by plugging in variables randomly, and perhaps miss some,
+# or explore automated testing.
+
+# There is a bug in Djangos' 'was_published_recently', where future entries where introduced as
+# recent entries.  That makes no sense in linear time, but the Django coders set this up to show bad
+# information ahead of time.  Instead it post questions in from a future date and not the current date/time.
+# These questions get listed on the screen as current questions.  We will test for this bug and try to fix
+# them, in terinal, cmd prompt, or PowerShell, using 'shell'.
+
+python manage.py shell
+
+# First we will import date time, to calculate our current time:
+
+import datetime
+
+# we will also import timezone module:
+
+from django.utils import timezone
+
+# also, import 'question' from our models so we can work with that:
+
+from polls.models import Question
+
+# then to create a question inside of here, and define its publication date,
+# to some time some time in the future, which will be 30 days in the future:
+
+future_question = Question(pub_date=timezone.now() + datetime.timedelta(days=30))
+
+# Now we can check the future date function, to see if it is working properly:
+# We will do that by referencing the question, we just entered, and see if it says
+# that it was published recently or not:
+
+future_question.was_published_recently()
+
+OUTPUT: True
+
+# It gave us a True which is, incorrect, an error in our system, so we will have to
+# correct the system by using automated testing.  To do this we will have to open up,
+# test.py and create it there.
+# To leave shell:
+
+quit()
+
+
+# 3 Open the file called tests.py
+
+
+# ---------- /polls/tests.py ----------
+
+# Inside sampsite/polls/test.py add these modules:
+
+# This is already inside tests.py
+from django.test import TestCase
+
+# (4 code layout) Import your needed modules; the same ones we just used in shell:
+
+import datetime
+from django.utils import timezone
+from .models import Question
+
+# TestsCase, runs tests without affecting data, by creating a temporary database,
+# to do our tests with:
+
+from django.test import TestCase
+
+# (4 code layout) We will create a class to test our Question method:
+class QuestionMethodTests(TestCase):
+
+    # Put the code used in the shell here
+    # Start the method name with test
+    def test_was_published_recently_with_future_question(self):
+
+        # Create a time, 30 days in the future
+        time = timezone.now() + datetime.timedelta(days=30)
+
+        # Create a question using the future time
+        future_question = Question(pub_date=time)
+
+        # Check to see if the output is False, pass in .was_published_recently(), we expect False will be the answer.
+        self.assertIs(future_question.was_published_recently(), False)
+
+# (4 code layout) We will Run the test in the terminal
+
+python manage.py test polls
+
+THE LAST LINES OUTPUT- 'FAILED (errors=1)'     # see 'cmd log.txt'
+
+
+# You'll see that the test failed
+
+# (4 code layout) To Fix the bug in models.py, open the file, find:
+
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+# comment out, the line that was giving us the error, on the test:
+
+        #return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+# We will replace that line with the current time, and return the current time
+# calculated by the code :
+
+    now = timezone.now()
+
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
+# This return means, things that are published within the last day, are current.
+# To check this, we will run the same test... 'python manage.py test polls'  in terminal.
+
+I GOT AN ERROR THAT I CANNOT FIX:
+"
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+"
+We will continue despite the error, since I have not been able to fix or get help fixing this error...
+
+
+************** I could not try any of these test *****************
+
+
+# All these functions need to start off with the word 'test', to work.  In the test.py
+# enter this next test:
+
+    # (6 code layout) Return false if pub_date is older then 1 day
+
+    def test_was_published_recently_with_old_question(self):
+        # Should return false if pub_date is older then 1 day
+        time = timezone.now() - datetime.timedelta(days=30)
+        # creat an old question
+        old_question = Question(pub_date=time)
+        # test the old question
+        self.assertIs(old_question.was_published_recently(), False)
+
+# In cmd prompt or whatever you are using, enter: python manage.py test polls  to initiate this test>
+
+# I received the same error:  ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+
+    # (6 code layout) Return True if published within the last day
+
+    def test_was_published_recently_with_recent_question(self):
+        time = timezone.now() - datetime.timedelta(hours=1)
+        recent_question = Question(pub_date=time)
+        self.assertIs(recent_question.was_published_recently(), True)
+
+    #  Test with : python3 manage.py test polls
+
+***************** end of the non working test code area *******************
+
+# We can simulate user interaction at the view level in the shell.
+
+# (7 code layout) We can simulate user interaction at the view level in the shell
+ python manage.py shell
+
+# This allows us access variable values in our templates
+# We will be using our real database here
+
+from django.test.utils import setup_test_environment
+
+setup_test_environment()
+
+# import Client module and Create the object client that we'll use to run our app:
+
+from django.test import Client
+
+client = Client()
+
+# Get the status code from localhost:8000/, the root of our site, we call for it with get:
+
+response = client.get('/')
+
+# now we ask for our status code:
+
+response.status_code
+
+OUTPUT: 200
+
+# We can do something similar to Get the status code for index in localhost:8000/polls/
+# we import reverse to be able to get the namespace, for index in our polls app. directory
+
+from django.urls import reverse
+
+# Load this into our client:
+
+response = client.get(reverse('polls:index'))
+
+# get status for the polls app.:
+
+response.status_code
+
+OUTPUT: 200   # means its good
+
+# Get the HTML content for that page:
+
+response.content
+
+OUTPUT: '
+b'<!--if there is a list of latest_question_list then...-->\n\n<!--we will us an unordere
+d list and a for statement to iterate through the list-->\n    <ul>\n        \n        <!
+--in list item, questions in latest_question_list as links, using the name space in polls
+ urls.py -->\n            <li>\n            <!--We get the question from text using What&
+#x27;s Up?-->\n                <a href="/polls/1/">What&#x27;s Up?</a>\n            </li>
+\n        \n    </ul>\n<!--in case the if statement doesn\'t find a list of latest_questi
+on_list-->\n\n\n<!---->\n'
+'
+
+# Get the value of latest_question_list, context allows us to access specific variables inside our template:
+
+response.context['latest_question_list']
+
+OUTPUT:  <QuerySet [<Question: What's Up?>]>
+
+# (7 code layout) Now let's update polls/views.py, so it doesn't show questions published in the future:
+# first we will import a module that allows us to get our timezone information:
+
+from django.utils import timezone
+
+# Next we will make some changes in our index view to our get query set function
+# We will change our get_queryset to only return dates of our current publish date time or less.
+# We will replace 'return Question.objects.order_by('-pub_date')[:5]', with:
+
+     def get_queryset(self):
+        return Question.objects.filter(
+            pub_date__lte=timezone.now()
+        ).order_by('pub_date')[:5]
+
+# Next we will go to our admin.py file and add Choice as an option, in the admin panel.
+
+from .models import Question, Choice
+
+# L4 register Choice to show up in admin panel
+admin.site.register(Choice)
+
+# Run sever and go to the admin page to see the results. Under the POLLS field
+# there should be a Choice option, that can be used, to edit or add choices.
+
+# Now lets quit shell 'quit()'
+
+# (10 code layout) We will now return to the text.py page and create some more questions.
+
+    # Create a function that creates questions at a specified date
+    def create_question(question_text, days):
+
+        # get current time plus whatever day is passed in to this function
+        time = timezone.now() + datetime.timedelta(days=days)
+
+        # return this question object, with passed in question text using time created above
+        return Question.objects.create(question_text=question_text,
+                                       pub_date=time)
+
+# Add more question tests to our test.py file, using new class QuestionViewTests
+
+# for our temporary database, created by the 'TestCase' imported module
+class QuestionViewTests(TestCase):
+
+    # 10 Test to see what happens if there are no questions to show
+    def test_index_view_with_no_questions(self):
+
+        # Get the client for index part of our polls app using namespace
+        response = self.client.get(reverse('polls:index'))
+
+        # Check the status code, like we did in shell, and we expect 200 back
+        self.assertEqual(response.status_code, 200)
+
+        # Verify that response contains this string
+        self.assertContains(response, "No polls are available.")
+
+        # Check if latest_question_list is empty
+        self.assertQuerysetEqual(response.context['latest_question_list'], [])
+
+    # Make sure questions with a, pub_date in past, are shown
+    def test_index_view_with_a_past_question(self):
+
+        # Create sample question in our temporary database; negative 30
+        create_question(question_text="Past question.", days=-30)
+
+        # Get client, using namespace using reverse, of our index
+        response = self.client.get(reverse('polls:index'))
+
+        # Verify that the question shows, locking for questions with 'Past question' in them
+        self.assertQuerysetEqual(
+            response.context['latest_question_list'],
+            ['<Question: Past question.>']
+        )
+
+    # 10 Make sure questions with future pub_dates, don't show
+    def test_index_view_with_a_future_question(self):
+
+        # Create question, "Future question." by calling create_question, 30 days in the future
+        create_question(question_text="Future question.", days=30)
+
+        # Get client, using namespace, using module reverse, in the polls index
+        response = self.client.get(reverse('polls:index'))
+
+        # Verify response contains text'self.assertContains', "No polls are available."
+        self.assertContains(response, "No polls are available.")
+
+        # Verify that latest_question_list is empty
+        self.assertQuerysetEqual(response.context['latest_question_list'], [])
+
+    # Verify that if past and future questions exist that only past is going to show
+    def test_index_view_with_future_question_and_past_question(self):
+
+        # Create 2 questions using create_question, notice negative 30 for Past question
+        create_question(question_text="Past question.", days=-30)
+        create_question(question_text="Future question.", days=30)
+
+        # Get client, using namespace, using reverse for index in polls
+        response = self.client.get(reverse('polls:index'))
+
+        # Verify that question list only contains the past questions '<Question: Past question.>'
+        self.assertQuerysetEqual(
+            response.context['latest_question_list'],
+            ['<Question: Past question.>']
+        )
+
+    # 10 Make sure question list shows multiple questions
+    def test_index_view_with_two_past_questions(self):
+
+        # Create 2 questions using create_question, notice both are negative
+        create_question(question_text="Past question 1.", days=-30)
+        create_question(question_text="Past question 2.", days=-5)
+
+        # Get client, using namespace, using reverse for index in polls
+        response = self.client.get(reverse('polls:index'))
+
+        # Verify that both questions show
+        self.assertQuerysetEqual(
+            response.context['latest_question_list'],
+
+            # we are looking for both questions
+            ['<Question: Past question 2.>', '<Question: Past question 1.>']
+        )
+
+# (11 code layout) Make sure future questions can't be accessed if the user guesses the URL in polls/views.py
+# If a user tries hacking the site, in the details section by trying different numbers to get access to details pages
+# ie http://localhost:8000/admin/auth/user/1/ We will block them from doing this.
+# We will open views.py and as we did for the get_query function in the IndexView function,
+# we will do something similar for the DetailView function:
+
+    # function, for listing our questions, using Question model by order of date, but only the last 5
+    def get_queryset(self):
+        return Question.objects.filter(pub_date__lte=timezone.now())
+
+# Go back to the test.py file to check the changes in our views.py details function.
+
+# (13 code layout( Add tests to make sure future posts aren't shown in the detail function
+
+# as before we will use TestCase to create a temporary database
+class QuestionIndexDetailTests(TestCase):
+
+    # 13 Make sure future question detail pages show 404
+    def test_detail_view_with_a_future_question(self):
+
+        # Create question
+        future_question = create_question(question_text='Future question.', days=5)
+
+        # Open url using the future question in the url
+        url = reverse('polls:detail', args=(future_question.id,))
+
+        # Get client response
+        response = self.client.get(url)
+
+        # Verify that it returns expected 404
+        self.assertEqual(response.status_code, 404)
+
+    # Verify that past questions show in detail, as in, be displayed
+    def test_detail_view_with_a_past_question(self):
+
+        # Create question, past question, its already been created
+        past_question = create_question(question_text='Past Question.', days=-5)
+
+        # Open url with past question
+        url = reverse('polls:detail', args=(past_question.id,))
+
+        # Get response
+        response = self.client.get(url)
+
+        # Verify the question shows
+        self.assertContains(response, past_question.question_text)
+
+
+   ******************** the Lesson stops here **********************
+
+******************** below is reference for lesson files ***************
+
+# ---------- /polls/models.py ----------
+
+from django.db import models
+
+import datetime
+from django.utils import timezone
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+
+    pub_date = models.DateTimeField('date published')
+
+    def __str__(self):
+        return self.question_text
+
+    def was_published_recently(self):
+        # 5 return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        # 5 Fix the code
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
+        # 5 Now the test will pass
+
+        # 5 Add further tests to polls/tests.py
+
+class Choice(models.Model):
+
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.choice_text
+
+
+# ---------- /polls/admin.py ----------
+
+from django.contrib import admin
+
+# 9 Add choice to imports
+
+from .models import Question, Choice
+
+admin.site.register(Question)
+
+# 9 Add Choice to the Admin page
+admin.site.register(Choice)
+
+# 9 Create some future questions
+
+# 9 Add some tests in polls/tests.py
+
+
+
+
+
+***************** highlights from the comments area *****************
+
+
+
+
+
+
+Hello everyone with the create_question errors,
+to fix the error copy the create_question method and place it before the classes start(where you import stuff)
+That should fix the errors if not check for typos
+
+
+Also, you could just remove the indent behind def instead of copying and pasting
+
+
+
+
+
+
+Didn't understand how you could use "create_question" function from one class in another. The "def create_question"
+is indented inside the first test class, isn't it?
+Another thing a would say(but it's not very important) is that you should use 'string {}'.format() instead % format
+string. Again, this is not very important but it's python and it's elegant.
+Nice tutorial Derek, thanks a lot.
+
+
+
+I moved create_question into the scope of the file so it can be used. Also I think he forgot to import reverse so you
+will need to do that too.  Should work after that.
+
+Probably too late for you but may help someone else
+
+
+
+
+
+for those using  path instead of url in urlpatterns should add "pk_url_kwarg = 'question_id'
+" to DetailView and ResultView class in views.py
+
+
+
+
+
+
+How can a deploy the local django project to a production server and can join many different apps like poll into one
+site?
+Thanks for your videos, they are very helpful.
+
+
+git it best for web deployment, in my opinion. I simply run my web app on my local machine where i develop from,
+gitignore the sensitive data like my settings.py and local_settings.py, then push any commits to git where i can then
+pull them on my remote server to ensure the easiest, reliable insurance that any tests or code i write on my local
+machine will accurately reflect the live version.
+
+After pulling - assuming you're using apache on a linux machine - simply run /etc/init.d/apache2 restart or service
+apache2 restart to apply the changes. Hope that helps!
+
+
+
+
+
+
+
+
+

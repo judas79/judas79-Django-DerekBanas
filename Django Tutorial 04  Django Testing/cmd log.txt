@@ -1,0 +1,773 @@
+Microsoft Windows [Version 10.0.18362.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on wi
+n32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> import datetime
+>>> from django.utils import timezone
+>>> from polls.models import Question
+>>> future_question = Question(pub_date=timezone.now() + datetime.timedelta(days=30))
+>>>
+>>> future_question.was_published_recently()
+True
+>>> quit()
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>cd..
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python manage.py test polls
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                          (venv) C:\Users\Gina\PycharmProjec
+
+
+
+
+                   psite>python manage.py test polls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite> python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on wi
+n32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.test.utils import setup_test_environment
+>>> setup_test_environment()
+>>> from django.test import Client
+>>> client = Client()
+>>> response = client.get('/')
+>>> response.status_code
+200
+>>> from django.urls import reverse
+>>> response = client.ge(reverse('polls:index'))
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Client' object has no attribute 'ge'
+>>> response = client.get(reverse('polls:index'))
+>>> response.status_code
+200
+>>> response.content
+b'<!--if there is a list of latest_question_list then...-->\n\n<!--we will us an unordere
+d list and a for statement to iterate through the list-->\n    <ul>\n        \n        <!
+--in list item, questions in latest_question_list as links, using the name space in polls
+ urls.py -->\n            <li>\n            <!--We get the question from text using What&
+#x27;s Up?-->\n                <a href="/polls/1/">What&#x27;s Up?</a>\n            </li>
+\n        \n    </ul>\n<!--in case the if statement doesn\'t find a list of latest_questi
+on_list-->\n\n\n<!---->\n'
+>>> response.contex['latest_question_list']
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'TemplateResponse' object has no attribute 'contex'
+>>> response.context['latest_question_list']
+<QuerySet [<Question: What's Up?>]>
+>>> quit()
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>cd ..
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>python manage.py test polls
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>sampsite
+'sampsite' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                      (venv) C:\Users\Gina\PycharmProject
+s\Django-DerekBanas\sampsite>python manage.py test polls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test smp
+site/ polls
+System check identified no issues (0 silenced).
+EE
+======================================================================
+ERROR: smpsite/ (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smpsite/
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'smpsite/'
+
+
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+FAILED (errors=2)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test smp
+site/polls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: smpsite/polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: smpsite/polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'smpsite/polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test sam
+psite/polls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite/polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite/polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'sampsite/polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.017s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test sam
+psite
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.sampsite (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.sampsite
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.sampsite'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test /po
+lls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: /polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: /polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named '/polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test \po
+lls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: \polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: \polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 153, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named '\\polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py test pol
+ls
+System check identified no issues (0 silenced).
+E
+======================================================================
+ERROR: sampsite.polls (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: sampsite.polls
+Traceback (most recent call last):
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 462, in _find_test_path
+    package = self._get_module_from_name(name)
+  File "C:\Users\Gina\AppData\Local\Programs\Python\Python36-32\lib\unittest\loader.py",
+line 369, in _get_module_from_name
+    __import__(name)
+ModuleNotFoundError: No module named 'sampsite.polls'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>
