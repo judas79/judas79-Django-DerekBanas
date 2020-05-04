@@ -22,7 +22,16 @@ class Question(models.Model):
 
     # see if the question was published recently or not
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+
+        # get current time, and return the current time
+        # calculated by the code :
+
+        now = timezone.now()
+
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
+        # L2
+        #return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
 
 # L2 different choices for our Questions
