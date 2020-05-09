@@ -1,7 +1,6 @@
 # L4 imports
 import datetime
 from django.utils import timezone
-from . models import Question
 
 # runs tests without affecting data, by creating temporary test database
 from django.test import TestCase
@@ -9,8 +8,10 @@ from django.test import TestCase
 # L4 this module will allow us to return a url we can point to based on whatever the current question is
 from django.urls import reverse
 
+from polls.models import Question, Choice
+
 # Create your tests here.
-'''
+
 # L4 We will create a class to test our Question method:
 class QuestionMethodTests(TestCase):
     
@@ -45,18 +46,18 @@ class QuestionMethodTests(TestCase):
         # set recent question within the hour
         recent_question = Question(pub_date=time)
         # define our test
-        self.assertIs(recent_question.was_published_recently(),
+        self.assertIs(recent_question.was_published_recently(), False)
 
 
-    # Create a function that creates questions at a specified date
-    def create_question(question_text, days):
+# Create a function that creates questions at a specified date
+def create_question(question_text, days):
 
-        # get current time plus whatever day is passed in to this function
-        time = timezone.now() + datetime.timedelta(days=days)
+    # get current time plus whatever day is passed in to this function
+    time = timezone.now() + datetime.timedelta(days=days)
 
-        # return this question object, with passed in question text using time created above
-        return Question.objects.create(question_text=question_text,
-                                       pub_date=time)
+    # return this question object, with passed in question text using time created above
+    return Question.objects.create(question_text=question_text,
+                                   pub_date=time)
                                        
 # for our temporary database, created by the 'TestCase' imported module
 class QuestionViewTests(TestCase):
@@ -139,7 +140,7 @@ class QuestionViewTests(TestCase):
             # we are looking for both questions
             ['<Question: Past question 2.>', '<Question: Past question 1.>']
         )
-'''
+
 
 # as before we will use TestCase to create a temporary database
 class QuestionIndexDetailTests(TestCase):
