@@ -28,6 +28,8 @@ python manage.py migrate    # migrate the new sql files change file we just made
 
 python manage.py sqlmigrate music 0001 # see what this migration of the 'music' app accomplished using id number; L8
 
+python manage.py test polls # run from directory containing manage.py, test.py for the polls directory
+
 
 'cmd' + c  # close Power Shell Window;  L2
 
