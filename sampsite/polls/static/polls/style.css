@@ -1,0 +1,11 @@
+/*Change the text color of links in lists. Go to /polls/templates/polls/index.html to
+ add the style sheet */
+li a {
+    color: green;
+}
+
+/* Add the image as a background */
+
+body {
+    background: white url("images/background.jpg");
+}

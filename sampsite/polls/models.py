@@ -30,6 +30,15 @@ class Question(models.Model):
 
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
+    # to display the publishing date in order
+    was_published_recently.admin_order_field = 'pub_date'
+
+    # changes True and False text in under heading Was Published Recently to green or red Icons
+    was_published_recently.boolean = True
+
+    # text above the True / False from Was Published Recently, to a shorter description
+    was_published_recently.short_description = 'Published Recently'
+
         # L2
         #return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 

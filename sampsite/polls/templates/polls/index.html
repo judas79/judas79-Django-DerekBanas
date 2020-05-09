@@ -1,4 +1,8 @@
-<!--if there is a list of latest_question_list then...-->
+<!--L5 load the static sheet (style.css), and link to the directory-->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<!--L4 if there is a list of latest_question_list then...-->
 {% if latest_question_list %}
 <!--we will us an unordered list and a for statement to iterate through the list-->
     <ul>
