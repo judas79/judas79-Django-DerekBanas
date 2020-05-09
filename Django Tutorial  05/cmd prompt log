@@ -1,0 +1,32 @@
+Microsoft Windows [Version 10.0.18362.778]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas>cd sampsite
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python -c "import django;
+ print(django.__path__)"
+['C:\\Users\\Gina\\PycharmProjects\\Kivy\\venv\\lib\\site-packages\\django']
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>from django.contrib impor
+t admin
+'from' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python shell
+python: can't open file 'shell': [Errno 2] No such file or directory
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on wi
+n32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.contrib import admin
+>>> quit()
+
+(venv) C:\Users\Gina\PycharmProjects\Django-DerekBanas\sampsite>python manage.py shell
+Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 16:07:46) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.test import TestCase
+>>> from django.test import TestCase
+>>>
