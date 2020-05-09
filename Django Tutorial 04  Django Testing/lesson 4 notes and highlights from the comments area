@@ -94,18 +94,6 @@ class IndexView(generic.ListView):
         # 2 Return the last 5 questions entered
         return Question.objects.order_by('-pub_date')[:5]
 
-****************** begin jump ****************
-    def get_queryset(self):
-
-        # 8 Return only questions with a pub_date less than
-        # or equal to now
-        return Question.objects.filter(
-            pub_date__lte=timezone.now()
-        ).order_by('-pub_date')[:5]
-
-        # 8 Add Choices to the Admin in admin.py
-
-****************** end jump *******************
 
 # (2 code layout) The DetailView displays the details on your object
 # being the Question model
@@ -117,13 +105,6 @@ class DetailView(generic.DetailView):
 
 # Define the path directory of the template to use with this data
     template_name = 'polls/detail.html'
-
-****************** begin jump *******************
-    # 12 Exclude questions that are not published yet
-    def get_queryset(self):
-        return Question.objects.filter(pub_date__lte=timezone.now())
-****************** end jump *******************
-
 
 
 # (2 code layout) Get the results from the questions
